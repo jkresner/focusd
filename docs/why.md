@@ -39,12 +39,13 @@ especially words!
 ### Current tools
 
 High quality software that functions as intended often comprises many 
-multiple more testing than implementation code than effectively 
+multiple more testing than implementation code that effectively 
 constrains how the creators logic can be utilized.
 
 With language we still rely on manual editing, sometimes peer
 reviewed. Besides being inadequate to address infinite complexity of addressing
 all the hurdles, testing/editing are available only before publishing. 
+
 Unfortunately we always become aware of issues after.
 
 ## Back story
@@ -52,11 +53,11 @@ Unfortunately we always become aware of issues after.
 Sometimes, one sentence or in my case three words is all it takes.
 
 Unresolvable differences boil down to not being able to see another's
-perspective. In long disputes, without something like focusd it can 
+perspective. In long disputes, without something like focusd it can be
 impossible even to express ones perspective. The worst scenario is
 when parties begin mis-projecting intent in an ongoing vicious cycle.
 Eventually if a 3rd party mediates, sides are rewarded on presentation 
 and negotiation skills instead of historical behavior. 
 
 focusd is an empathy tool designed to close gaps with optimistic hopes to
-stop divergence before dialog.
+stop divergence before dialog ends.

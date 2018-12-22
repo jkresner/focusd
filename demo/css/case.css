@@ -1,0 +1,30 @@
+.focusd + .case {
+  font-size:11px;
+  font-family:"Arial", Helvetica, Arial, sans-serif;
+  text-align:justify;
+  background:hsl(180,100%,20%,2%);
+  color:hsl(180,100%,5%,99%);
+  border:dotted 1px hsl(180,100%,10%,10%);
+  border:none;
+}
+  .focusd + .case > ol {
+    margin-left:-14px;
+    margin-right:0.6em;
+    counter-reset:cl;
+    list-style-type:none;
+}
+    .focusd + .case > ol > li::before {
+      position:absolute;
+      margin-left:-26px;
+      font-family:courier;
+      color:black;
+      counter-increment:cl;
+      content:counter(cl);
+}
+  .focusd + .case blockquote {
+    font-size:0.9em;
+    margin-left:15px
+}
+    .focusd + .case blockquote p {
+      margin-bottom:2px
+}

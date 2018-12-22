@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>focusd</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./styles/demo.css" />
+</head>
+<body id="demo">
+
+<h1><a href="./demo.html">focusd demo</a></h1>
+<ol id="ruler">
+  <li class="px480"><p>480px</p></li>
+  <li class="px640"><p>640px</p></li>
+  <li class="px800"><p>800px</p></li>
+  <li class="px1200"><p>1200px</p></li>
+  <li class="px320"><p>320px</p></li>
+</ol>
+
+<div id="prv" class="focusd"></div></td>
+
+<!--<b>STYLE</b>
+<input name="stype" type="checkbox" id="chighlight" onchange="ftCss(this)"><label for="rdoc">highlight</label>
+<input name="stype" type="checkbox" id="rlaw" onchange="ftCss(this)"><label for="rlaw">grow</label>
+<br />
+  -->
+
+<ul id="trsfrm">
+  <li><b>INPUT</b> <b>AS</b>
+<input name="t1" type="radio" id="r1doc"><label for="r1doc">document</label>
+<input name="t1" type="radio" id="r1law"><label for="r1law">legislation</label>
+<input name="t1" type="radio" id="r1case"><label for="r1case">case law</label>
+<input name="t1" type="radio" id="r1mail" onchange="rfsh()"><label for="r1mail">email</label>
+<input name="t1" type="radio" id="r1img" onchange="rfsh()"><label for="r1img">image</label>
+    <textarea id="in1" onkeypress="rfsh()" onchange="rfsh()"></textarea>
+  </li>
+  <li><h4>MARKUP</h4>
+    <textarea id="mu" onkeypress="rfsh()" onchange="rfsh()">{}</textarea>
+  </li>
+  <li><b>INPUT 2</b> <b>AS</b>
+<input name="t2" type="radio" id="r2doc" onchange="rfsh()"><label for="r2doc">document</label>
+<input name="t2" type="radio" id="r2law" onchange="rfsh()"><label for="r2law">legislation</label>
+<input name="t2" type="radio" id="r2case" onchange="rfsh()"><label for="r2case">case law</label>
+<input name="t2" type="radio" id="r2mail" onchange="rfsh()"><label for="r2mail">email</label>
+<input name="t2" type="radio" id="r2img" onchange="rfsh()"><label for="r2img">image</label>
+    <textarea id="in2" onblur="rfsh()" onchange="rfsh()"></textarea>
+  </li>
+  <li><h3>HTML (post)</h3><textarea id="htm_post"></textarea></li>
+  <li></li>
+  <li><h3>HTML (pre)</h3><textarea id="htm_pre"></textarea></li>
+  <li><h3>MD (post markup)</h3><textarea id="md_post"></textarea></li>
+  <li></li>
+  <li><h3>MD (pre markup)</h3><textarea id="md_pre"></textarea></li>
+</ul>
+
+
+<script type="text/javascript">
+
+var el = {
+  i1:  document.getElementById('in1'),
+  mu:  document.getElementById('mu'),
+  i2:  document.getElementById('in2'),
+  mp:  document.getElementById('md_pre'),
+  mr:  document.getElementById('md_post'),
+  hp:  document.getElementById('htm_pre'),
+  hr:  document.getElementById('htm_post'),
+  pv:  document.getElementById('prv')
+}
+
+
+function preproc(md) {
+  var parts = md.split('---\n### ')
+  for (var i=1;i<parts.length;i++) {
+    var lines = parts[i].split('\n')
+    var partid = lines.shift().trim()
+    var pattern = new RegExp('\\[#'+partid+'\\]','ig')
+    var body = lines.join('\n')
+    var html = marked(body)
+    parts[0] = parts[0].replace(pattern,
+      html
+        .replace(/\\n/g,'<br />')
+        .replace(/\n/g,''))
+  }
+  el.mp.value = parts[0] //.trim()
+  console.log('el.mp.value', el.mp.value)
+  return el.mp.value
+}
+
+
+function markup(md1, mup, md2) {
+  // console.log('markup skip md2', md2 == '')
+
+  function ellips(md, map) {
+    var keys = Object.keys(map)
+    // console.log('ellips', map, keys)
+    for (var k=0;k<keys.length;k++) {
+      var start = md.indexOf(keys[k])
+      var end =  md.indexOf(map[keys[k]])
+      // console.log('ellips', keys[k], start, end)
+      if (start > -1 && end > -1 && end > start)
+        md = md.slice(0, start) + ' ... ' + md.slice(end, md.lengh)
+    }
+    return md
+  }
+
+  function li_law(md) { return ('\n'+md)
+      .replace(/\n\(i\)\s*/g, '\n - ')
+      .replace(/\n\s*\((i|ii|iii|iv|v|vi)\)\s*/g, '\n1. ')
+      .replace(/\n\s*\([1-9]\)\s*/g, '\n1. ')
+      .replace(/\n\s*\([a-z]\)\s*/g, '\n - ')
+  }
+
+  function rxEsc(s) {
+    return new RegExp(s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'),'g')
+  }
+
+  var art = '<ol><li>No arguments here yet...</li></ol>'
+  if (mup.focus) {
+    art = ''
+    var fc = mup.focus
+    for (var i=0;i<fc.length;i++) {
+      var anot = fc[i]
+      var li = i+1
+      var color = 'hi'+(anot.color||0)
+      var mTag = '<mark class="'+color+'"><i>'
+      if (anot.note) art += '\n'+li+'. '+anot.note
+      if (anot.in1) {
+        var mks = anot.in1
+        for (var m=0;m<mks.length;m++)
+          md1 = md1.replace(rxEsc(mks[m]),mTag+li+'</i>'+mks[m]+'</mark>')
+      }
+      if (mup.focus[i].in2) {
+        var mks = anot.in2
+        for (var m=0;m<mks.length;m++)
+          md2 = md2.replace(rxEsc(mks[m]),mTag+li+'</i>'+mks[m]+'</mark>')
+      }
+    }
+    // console.log('art', art)
+    art = marked(art)
+      .replace('<li>', '<li class="hi0">')
+      .replace('<li>', '<li class="hi1">')
+      .replace('<li>', '<li class="hi0">')
+      .replace('<li>', '<li class="hi2">')
+  }
+
+  var md2_post_mup = ''
+  if (md2 != '') {
+    if (mup.in2.ellipt) md2 = ellips(md2, mup.in2.ellipt)
+    Object.keys(mup.in2.map||{}).forEach(function(k) {
+      md2 = md2.replace(rxEsc(mup.in2.map[k]), k)
+    })
+    md2_post_mup = '\n<div>\n<q class="'+mup.in2.css+'">\n\n'+li_law(md2)+'\n</q>\n</div>'
+  }
+  Object.keys(mup.in1.map||{}).forEach(function(k) {
+    md1 = md1.replace(rxEsc(mup.in1.map[k]), k)
+  })
+// console.log('md1', md1)
+
+  el.mp.value = '<div>\n<figure class="'+mup.in1.css+'">\n'+li_law(md1)+'\n</figure>\n</div>'
+              + '\n<article>\n'+art+'\n\n</article>'
+              + md2_post_mup
+
+  el.mr.value = el.mp.value
+  console.log(el.mr.value)
+  return el.mr.value
+}
+
+
+function postproc(md_focusd) {
+  var html_pre = marked(md_focusd)
+  el.hp.value = html_pre
+  el.hr.value = el.hp.value
+                  .replace(/  \\n\\n/g, '<br /><br />')
+                  .replace(/  \\n/g, '<br />')
+                  .replace(/\>\\n/g, '><br />')
+                  .replace(/\>\\n\\n/g, '><br />')
+                  .replace(/\n\<\//g, '</')
+                  .replace(/\n\<tr\>/g, '\n  <tr>')
+                  .replace(/\n\<tbody\>\<tr\>/g, '<tbody>\n  <tr>')
+                  .replace(/<th>/g, '    <th>')
+                  .replace(/<th a/g, '    <th a')
+                  .replace(/<td>/g, '    <td>')
+                  .replace(/\<table\>\n\<thead\>/g, '\n<table><thead>')
+
+  // remove all decimals
+        .replace(/(\.\d+)+/g,'')
+
+                  .trim()
+
+
+  return el.hr.value
+}
+
+function rfsh() {
+  [el.i1,el.i2,el.mr,el.hr,el.mp,el.hp].forEach(function(txt) {
+    txt.style.height = '100px';
+    txt.style.height = (txt.scrollHeight-10)+"px";
+  })
+
+  //-- so we dont cause multiple render on doc load
+  if (el.i1.value == '') return
+
+  var fmup = JSON.parse(el.mu.innerHTML||'{}')
+  fmup.in1 = fmup.in1 || {};
+  fmup.in2 = fmup.in2 || {};
+
+  ['doc','img','mail','law','case'].forEach(function(type) {
+    if (document.getElementById('r1'+type).checked)
+      fmup.in1.css = type
+    if (document.getElementById('r2'+type).checked)
+      fmup.in2.css = type
+  })
+
+  // console.log('el.i1.val\n', el.i1.value)
+  console.log('fmup', fmup)
+  // console.log('el.i2.val\n', el.i2.value)
+  el.pv.innerHTML = postproc(markup(el.i1.value, fmup, el.i2.value))
+}
+
+var focusd_type1 = 'doc'
+var defaultTxt = ``
+
+var focusd_type2 = 'law'
+var defaultTxt2 = `#### 83 Levying of contributions
+(1)  An owners corporation levies a contribution required to be paid to the administrative fund or capital works fund by an owner of a lot by giving the owner written notice of the contribution payable.
+(2)  Contributions levied by an owners corporation must be levied in respect of each lot and are payable (subject to this section and section 82) by the owners in shares proportional to the unit entitlements of their respective lots.
+(3)  Any contribution levied by an owners corporation becomes due and payable to the owners corporation on the date set out in the notice of the contribution. The date must be at least 30 days after the notice is given.
+(4)  Regular periodic contributions to the administrative fund and capital works fund of an owners corporation are taken to have been duly levied on an owner of a lot even though notice levying the contributions was not given to the owner.
+
+#### 83 Liability of persons other than owners for contributions
+(1)  If, at the time a person becomes the owner of a lot, another person is liable to pay a contribution in respect of the lot, the owner is jointly and severally liable with the other person for the payment of the contribution and any interest on the contribution.
+(2)  A mortgagee or covenant chargee in possession of a lot is jointly and severally liable with the owner of the lot:
+  (a)  for any regular periodic contributions to the administrative fund or capital works fund together with any interest on those contributions, and
+  (b)  for any other contribution together with interest on that contribution taken to recover unpaid contributions, if the mortgagee or covenant chargee has been given written notice of the levy of the contribution, and
+  (c)  for any costs payable as a debtor in respect of enforcement action to recover unpaid contributions.
+(3)  Subsection (2) does not affect the liability of an owner of a lot for any contribution levied under this section.
+
+#### 103 Legal services to be approved by general meeting
+(1)  An owners corporation or strata committee of an owners corporation must not obtain legal services for which any payment may be required unless a resolution approving the obtaining of those services is passed at a general meeting of the owners corporation.
+(2)  An owners corporation or strata committee may obtain legal services without obtaining approval under this section if:
+  (a)  it is of the opinion that urgent action is necessary to protect the interests of the owners corporation, and
+  (b)  the cost of the legal services does not exceed $10,000 or another amount prescribed by the regulations for the purposes of this subsection.
+(3)  Approval under this section is not required for the following:
+  (a)  to obtain legal advice before commencing legal action,
+  (b)  to take legal action to recover unpaid contributions, interest on unpaid contributions or related expenses,
+  (c)  to take any other legal action prescribed by the regulations for the purposes of this section.
+(4)  A failure by an owners corporation or the strata committee of an owners corporation to obtain an approval under this section does not affect the validity of any proceedings or other legal action taken by the owners corporation.
+(5)  In this Division:
+    ***legal services*** includes obtaining legal advice and taking legal action.
+    - - -
+    > ### Strata Schemes Management Regulations 2016
+    > #### 26 Approval for legal services costs
+    >  (1)  ...
+    > (2)  For the purposes of section 103 of the Act, approval is not required under that section to the obtaining of legal services in relation to a matter that is not urgent if the cost of the legal services does not exceed $3,000.
+`
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  marked.setOptions({
+    gfm: true, //smartLists:true,
+    breaks: true, //baseUrl:'#'
+  })
+
+  document.getElementById('r1'+focusd_type1||'doc').click()
+  document.getElementById('r2'+focusd_type2||'law').click()
+
+  el.i1.innerHTML = defaultTxt
+  el.i2.innerHTML = defaultTxt2||''
+  rfsh()
+})
+
+
+</script>
+<script src="../focusd/lib/marked.min.js"></script>
+
+</body>

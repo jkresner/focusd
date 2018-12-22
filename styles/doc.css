@@ -1,0 +1,62 @@
+.focusd .doc {
+  border-top-left-radius:12px;
+  border-top-right-radius:12px;
+  border-bottom-right-radius:4px;
+  border:solid 2px hsl(300,100%,15%,15%);
+  border-top:solid 3px hsl(300,100%,15%,15%);
+  border-bottom:solid 10px hsl(300,100%,15%,20%);
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,.11), 0 5px 15px 0 rgba(0,0,0,.08);
+  background:hsl(300,100%,85%,4%);
+  color:hsl(300,100%,10%,96%);
+  margin:10px 10px 10px 0;
+}
+  .focusd .doc * {
+    margin:0;padding:1px 0;line-height:1.5em;
+/*}*/
+/*.focusd + .doc * {*/
+    white-space: -moz-pre-wrap !important;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    /*word-wrap: break-word;*/
+    /*white-space: -webkit-pre-wrap;*/
+    /*word-break: break-all;*/
+    /*white-space: normal;/*/
+}
+  .focusd .doc p {
+    margin:1px 0px 0px 0px
+}
+  .focusd .doc hr {
+    border:none;
+    border-top:solid 1px rgb(0,0,0,0.05);
+    height:0;
+    margin:0.5em 0.15em 1em 0.15em;
+}
+  .focusd .doc table {
+    overflow:auto;
+    vertical-align:top;
+    width:100%;
+    margin-bottom:1em;
+    border:none;
+    border-spacing: 0;
+    font-size:0.9em;
+    border-collapse:collapse;
+}
+    .focusd .doc table * {
+      vertical-align:top;
+      border:none;
+      line-height:1.1em;
+}
+    .focusd .doc table th {
+      vertical-align:bottom;
+      padding-bottom:3px;
+      border-bottom:solid 1px hsl(300,100%,50%,5%);
+      font-size:0.9em;
+      line-height:0.8em;
+      letter-spacing:-0.05em;
+}
+    .focusd .doc td > em {
+      font-size:0.85em;
+      display:inline-block;
+      word-wrap: break-word;
+}

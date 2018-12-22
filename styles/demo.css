@@ -1,0 +1,58 @@
+@import 'focusd.css';
+
+body#demo { text-align:left;padding:0;margin:0; }
+body#demo > h1 { padding:5px;font-size:15px;margin:0;display:block;height:16px;background:black }
+body#demo > h1 > a { color:white }
+body#demo > #ruler {
+  list-style:none;
+  display:none;
+  font-size:8px;
+  text-align:right;
+  opacity:0.5;
+  font-family:courier;
+  margin:5px 0 }
+body#demo > #ruler > div { border:none;border-top:dotted 1px black;height:0.95em;
+  position:relative;margin-right:20px; }
+body#demo > #ruler p { position:absolute;top:-1.6em;right:10px;background:white;width:36px;text-align:center;font-weight:bold }
+body#demo > #ruler .px320 { width:320px }
+body#demo > #ruler .px480 { width:480px }
+body#demo > #ruler .px640 { width:640px;border-top-style:dashed }
+body#demo > #ruler .px800 { width:800px }
+body#demo > #ruler .px1200 { width:1200px;border-top-style:dashed }
+
+body#demo > #prv { margin:5px 10px; }
+body#demo blockquote { margin:0;padding:0 }
+body#demo > ul {
+  clear:both;
+  width:100%;
+  list-style:none;
+}
+body#demo > ul > li {
+  width:30%;
+  margin:10px 0.5%;
+  display:inline-block;
+  vertical-align:top;
+  font-size:12px;
+  padding:0;
+}
+
+/*body#demo > #trsfrm > li > b {
+  margin:0;padding:0;font-size:12px;opacity:0.2 }
+*/
+/*body#demo > #trsfrm > li > label { margin:0;padding:0;font-size:11px;opacity:0.85 }*/
+body#demo > ul textarea {
+  font-size:11px;
+  display:block;
+  color:green;
+  border:none;
+  background:rgb(247, 247, 247, 0.75);
+  opacity:0.3;
+  line-height:12px;
+  min-height:100px;
+  letter-spacing:-0.25px;
+  padding:5px;
+  width:100%;
+  resize:none; }
+body#demo > ul textarea:hover { opacity:1 }
+
+

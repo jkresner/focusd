@@ -1,0 +1,36 @@
+{
+  "author": {
+    "name": "J Kresner"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A markup framework built for expressing interpretation",
+  "dependencies": {
+    "marked": "*",
+    "moment": "*"
+  },
+  "devDependencies": {
+    "html-differ": "1.3.4",
+    "screamjs": "0.8.0",
+    "showdown": "*"
+  },
+  "engines": {
+    "node": ">=0.11.0"
+  },
+  "license": "MIT",
+  "main": "./lib/focusd.js",
+  "name": "marked",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jkresner/focusd.git"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/coffee test/index.coffee"
+  },
+  "tags": [
+    "markdown",
+    "markup",
+    "html"
+  ],
+  "version": "0.0.2"
+}

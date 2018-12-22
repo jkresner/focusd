@@ -1,0 +1,97 @@
+/*@import 'case.css';*/
+/*@import 'law.css';*/
+@import 'doc.css';
+@import 'mail.css';
+@import 'article.css';
+
+/*
+table tr {
+  background-color:#fff;
+  border-top: 1px solid #c6cbd1;
+}
+table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}*/
+
+
+.focusd > div:first-child {
+  float:left;
+  color:black;
+}
+
+.focusd > div:last-child {
+  float:left;
+  /*border-left:solid hsl(0,0%,70%,25%) 320px;*/
+  /*background:blue;*/
+}
+
+.focusd > div > figure {
+  z-index:1;
+  position:relative;
+  box-sizing:content-box;
+  width:480px;
+  padding:10px;
+  font-family:courier;
+  font-size:10px;
+  display:block;
+}
+.focusd > div > figure {
+  display:block }
+.focusd > div > figure ul {
+  list-style-type:none;margin:0;padding:0
+}
+
+.focusd > div > q {
+  z-index:1;
+  position:relative;
+  background:white;
+  display:block;
+  font-size:10px;
+  width:320px;
+}
+.focusd > div > q:before { content:'' }
+
+mark {
+  position:relative;
+  /*padding-left:0.9em;*/
+  margin-left:5px;
+  display:inline;
+}
+mark.hi1 {
+  color:black;
+  background:hsl(120,100%,90%,60%);
+}
+mark.hi2 {
+  color:black;
+  background:hsl(215,100%,85%,60%);
+}
+mark > i {
+  position:absolute;
+  left:-1.5em;
+  top:-0.8em;
+  display:block;
+  text-align:center;
+  font-size:0.85em;
+  font-family:arial;
+  font-style:normal;
+  font-weight:bold;
+  text-align:center;
+  color:black;
+  border:solid 2px hsl(60,95%,40%,30%)!important;
+  background:hsl(60,95%,50%);!important;
+  border-radius:50%;
+  width:1.1em;
+  height:1.1em;
+  opacity:0.6;
+}
+mark.hi1 i {
+  color:black;
+  border:solid 2px hsl(120,100%,20%,40%)!important;
+  background:hsl(120,100%,90%,50%);
+}
+mark.hi2 i {
+  color:black;
+  border:solid 2px hsl(215,100%,45%,50%)!important;
+  background:hsl(215,100%,85%,50%);
+}
+
