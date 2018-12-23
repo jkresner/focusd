@@ -1,4 +1,3 @@
-var fix = { md:{}, js:{} }; fix.js['sma-fin-mgt'] = ` 
 {
   "in": [{
     "src": "r.37paul.st/20170430/13385-cash-apr",
@@ -13,24 +12,16 @@ var fix = { md:{}, js:{} }; fix.js['sma-fin-mgt'] = `
   {
     "src": "legislation.nsw.gov.au/~/view/act/2015/50/part5",
     "ellipt": {
-      "#### 75 Investment": "
-
-#### 78 Accounts",
-      "**Amounts payable from": "
-
-#### 74 Capital",
-      "**Establishment of": "
-(2) **Amounts pay",
+      "#### 75 Investment": "\n\n#### 78 Accounts",
+      "**Amounts payable from": "\n\n#### 74 Capital",
+      "**Establishment of": "\n(2) **Amounts pay",
       "An owners corporation must pay the following": "administrative fund",
-      "(5) **Exemption": "
-
-#### 78 Accounts"
+      "(5) **Exemption": "\n\n#### 78 Accounts"
     }
   }],
   "focus": [
     {
-      "note": "Here's my first point about funds
-It's pretty clear I'd paid my levies as of a few days before I was minuted as **unfinancial**.",
+      "note": "Here's my first point about funds\nIt's pretty clear I'd paid my levies as of a few days before I was minuted as **unfinancial**.",
       "mark": [
         ["J Kresner","***0.00***","***NIL***","at 30/04/17"],
         ["required to be, paid into the fund under this Act.",
@@ -52,28 +43,4 @@ It's pretty clear I'd paid my levies as of a few days before I was minuted as **
                []]
     }
   ]
-}`; fix.md['transcribe_1'] = ` 
-
-1.  
-    t~ email  
-    n~ Squash on 1 line  
-    s~ www.domain/url  
-    …~ 34,92-94  
-    p~ fn3  
-1.  
-    t~ doc  
-
-+  
-    1. /\`
-[a-b]: *
-\`/  
-    1. /\`text select\`/g  
-    > ## header  
-    > and p body  
-
-+  
-    1.   
-    1. /\`abba\`/ig  /\`baba\`/  
-    > ### h3  
-    > - li1  
-    > - li2`; module.exports = fix; 
+}

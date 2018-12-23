@@ -1,0 +1,1 @@
+var fix = { html: {}, terminal: 'one day!', postfix: 'another day' }; module.exports = fix; 

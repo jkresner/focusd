@@ -1,0 +1,63 @@
+## Part 5 Financial management
+
+### Division 1
+#### 73 …
+…   
+…  
+### Division 2
+#### 79 …
+…   
+…   
+…   
+…  
+
+#### 83 Levying of contributions
+(1)  An owners corporation levies a contribution required to be paid to the administrative fund or capital works fund by an owner of a lot by giving the owner written notice of the contribution payable.
+(2)  Contributions levied by an owners corporation must be levied in respect of each lot and are payable (subject to this section and section 82) by the owners in shares proportional to the unit entitlements of their respective lots.
+(3)  Any contribution levied by an owners corporation becomes due and payable to the owners corporation on the date set out in the notice of the contribution. The date must be at least 30 days after the notice is given.
+(4)  Regular periodic contributions to the administrative fund and capital works fund of an owners corporation are taken to have been duly levied on an owner of a lot even though notice levying the contributions was not given to the owner.
+
+#### 83 Liability of persons other than owners for contributions
+(1)  If, at the time a person becomes the owner of a lot, another person is liable to pay a contribution in respect of the lot, the owner is jointly and severally liable with the other person for the payment of the contribution and any interest on the contribution.
+(2)  A mortgagee or covenant chargee in possession of a lot is jointly and severally liable with the owner of the lot:
+  (a)  for any regular periodic contributions to the administrative fund or capital works fund together with any interest on those contributions, and
+  (b)  for any other contribution together with interest on that contribution taken to recover unpaid contributions, if the mortgagee or covenant chargee has been given written notice of the levy of the contribution, and
+  (c)  for any costs payable as a debtor in respect of enforcement action to recover unpaid contributions.
+(3)  Subsection (2) does not affect the liability of an owner of a lot for any contribution levied under this section.
+
+…   
+…   
+
+### Division 3
+#### 92 …
+…   
+…   
+…   
+…   
+
+### Division 4
+#### 96 …
+
+### Division 5
+#### 100 …
+#### 103 Legal services to be approved by general meeting
+(1)  An owners corporation or strata committee of an owners corporation must not obtain legal services for which any payment may be required unless a resolution approving the obtaining of those services is passed at a general meeting of the owners corporation.
+(2)  An owners corporation or strata committee may obtain legal services without obtaining approval under this section if:
+  (a)  it is of the opinion that urgent action is necessary to protect the interests of the owners corporation, and
+  (b)  the cost of the legal services does not exceed $10,000 or another amount prescribed by the regulations for the purposes of this subsection.
+(3)  Approval under this section is not required for the following:
+  (a)  to obtain legal advice before commencing legal action,
+  (b)  to take legal action to recover unpaid contributions, interest on unpaid contributions or related expenses,
+  (c)  to take any other legal action prescribed by the regulations for the purposes of this section.
+(4)  A failure by an owners corporation or the strata committee of an owners corporation to obtain an approval under this section does not affect the validity of any proceedings or other legal action taken by the owners corporation.
+(5)  In this Division:
+    ***legal services*** includes obtaining legal advice and taking legal action.
+    - - -
+    > ### Strata Schemes Management Regulations 2016
+    > #### 26 Approval for legal services costs
+    >  (1)  ...
+    > (2)  For the purposes of section 103 of the Act, approval is not required under that section to the obtaining of legal services in relation to a matter that is not urgent if the cost of the legal services does not exceed $3,000.
+
+#### 105 Disclosure of matters relating to legal costs
+…
+
