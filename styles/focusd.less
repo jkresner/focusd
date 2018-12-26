@@ -1,8 +1,8 @@
-/*@import 'case.css';*/
-/*@import 'law.css';*/
-@import 'doc.css';
-@import 'mail.css';
-@import 'article.css';
+@import './mail.css';
+@import './doc.css';
+@import './article.css';
+@import './demo/case.css';
+@import './demo/law.css';
 
 /*
 table tr {
@@ -12,7 +12,6 @@ table tr {
 table tr:nth-child(2n) {
   background-color: #f6f8fa;
 }*/
-
 
 .focusd > div:first-child {
   float:left;
@@ -25,7 +24,7 @@ table tr:nth-child(2n) {
   /*background:blue;*/
 }
 
-.focusd > div > figure {
+.focusd > figure {
   z-index:1;
   position:relative;
   box-sizing:content-box;
@@ -34,10 +33,12 @@ table tr:nth-child(2n) {
   font-family:courier;
   font-size:10px;
   display:block;
+  float:left;
+
 }
-.focusd > div > figure {
+.focusd > figure {
   display:block }
-.focusd > div > figure ul {
+.focusd > figure ul {
   list-style-type:none;margin:0;padding:0
 }
 
@@ -78,7 +79,7 @@ mark > i {
   text-align:center;
   color:black;
   border:solid 2px hsl(60,95%,40%,30%)!important;
-  background:hsl(60,95%,50%);!important;
+  background:hsl(60,95%,50%)!important;
   border-radius:50%;
   width:1.1em;
   height:1.1em;
@@ -95,3 +96,6 @@ mark.hi2 i {
   background:hsl(215,100%,85%,50%);
 }
 
+  .mk1669_1 { background:rgb(252,252,58,.5) }
+  .mk1669_2 { background:rgb(92,238,51,1) }
+  .mk1669_3 { background:rgb(252,252,58,.25) }

@@ -1,2 +1,0 @@
-window.fd = {}
-fd.demo = {}

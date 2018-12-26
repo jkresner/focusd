@@ -48,14 +48,14 @@ module.exports = -> DESCRIBE 'Transcribe', ->
 
   IT 'Short hand', ->
     smu = "~~1~  ~t=email  ~n=Squash on 1 line  ~s=www.domain/url  ~…=34,92-94  ~p=fn3  ~~2~  ~t=doc  ~~+~  ~1=/`\\n[a-b]: *\\n`/  ~2=/`text select`/g  ~> ## header  ~> and p body  ~~+~  ~1=  ~2=/`abba`/ig  /`baba`/  ~> ### h3  ~> - li1  ~> - li2"
-    {transcribe_1} = FIXTURE.up.md
+    {transcribe_1} = FIXTURE['up.md'].md
     tLns = transcribe_1.split('\n').map (l) => l.replace(/ /g,'_')
     exnd = lib.expand(smu)
     console.log('exnd'.yellow, exnd)
     eLns = exnd.split('\n').map (l) => l.replace(/ /g,'_')
     i = 0
     for ln in tLns
-      expect(ln, "\n#{i+1}|[#{ln}]\n#{i+1}|[#{eLns[i]}]").equal(eLns[i])
+      expect(ln, "\n#{i+1}|[#{ln}]\n#{i+1}|[#{eLns[i]}]\n\n#{tLns.join('\n')}\n\n#{eLns.join('\n')}").equal(eLns[i])
       i++
     # console.log(exp['+transcribe_1+']')
     # console.log(expanded)

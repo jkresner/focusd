@@ -1,0 +1,87 @@
+@import '../focusd';
+
+body#demo {
+  margin:0;padding:0;
+  font-size:15px;
+  > * { display:block;padding:0px 2px;list-style:none; }
+  > h1 {
+    margin:0;
+    background:#222;
+    color:white;
+    font:.7em arial;
+    text-align:left; }
+  > ol {
+    opacity:0.5;
+/*    display:none;*/
+    margin:5px 0;
+    font:bold 8px courier;
+    text-align:right;
+    li {
+      border:none;border-top:dotted 1px black;
+      height:0.9em;
+      position:relative;
+      margin-right:20px; }
+    .px32 { width:320px }
+    .px48 { width:480px }
+    .px64 { width:640px;border-top-style:dashed }
+    .px80 { width:800px }
+    .px12 { width:1200px;border-top-style:dashed }
+    p { position:absolute;
+      top:-1.6em;
+      right:10px;
+      width:36px;
+      background:white;
+      text-align:center }}
+  > ul {
+    clear:both;
+    background:black;
+    /*width:100%;*/
+    li {
+      position:relative;
+      width:31.2%;
+      margin:1em 1%;
+      display:inline-block;
+      vertical-align:top;
+      font-size:12px;
+      padding:0;
+    > label {
+        margin-top:.75em;
+        background:yellow;
+        color:black;
+        padding:1px 5px;
+        position:absolute;
+        font-weight:bold;
+        opacity:0.8;
+        right:1px;
+      }
+    }
+    fieldset {
+      line-height:-.5em;
+      background:cyan;opacity:0.5;
+      border:none;width:100%;padding:2px;margin:0;
+      + label {
+        margin-top:-0.85em;
+        + textarea { margin-top:0; }
+      }
+    }
+    textarea {
+      margin-top:1.75em;
+      font-size:11px;
+      display:block;
+      color:green;
+      border:none;
+      background:rgb(247, 247, 247, 0.75);
+      opacity:0.6;
+      line-height:12px;
+      min-height:100px;
+      letter-spacing:-0.25px;
+      padding:5px;
+      width:100%;
+      resize:none;
+      :hover { opacity:1 }
+    }
+  }
+}
+
+body#demo #prv { padding:0px 5px; }
+/*body#demo blockquote { margin:0;padding:0 }*/
