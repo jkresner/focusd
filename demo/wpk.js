@@ -1,22 +1,27 @@
-const path = require('path')
+const {join} = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const {HotModuleReplacementPlugin} = webpack
 
-console.log('\n--- START: webpack.config.js')
+const dir_root = __dirname
+const dir_out = join(dir_root, 'dist')
 
+console.log(`
+--- config: webpack`)
 
 module.exports = {
   mode: 'development',
   entry: {
-    demo: './index.app.js'
+      index: join(dir_root,'index.js')
   },
   devtool: 'inline-source-map',
   devServer: {
-    // contentBase: './dist',
+    clientLogLevel: 'none',
+    contentBase: './demo',
     noInfo: true,
     hot: true,
+    port: 8060,
     stats: 'minimal'
   },
   plugins: [
@@ -26,7 +31,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: dir_out
   },
   module: {
     rules: [
