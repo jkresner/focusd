@@ -1,5 +1,3 @@
-<style>#the-pleading+ol { counter-reset:cl 27 }</style>
-
 ## THE PLEADING
 
 27. The appellant’s statement of claim went through a number of formulations. Ultimately, the appellant repleaded his cause of action as one in nuisance. The pleading in question, called a “Substituted Statement of Claim” (which was not filed but was the pleading considered by the primary judge for the purposes of the separate question) described the lot entitlement of the appellant’s unit and the relevant parts of the common property, including the façade and external walls, windows and glass doors on certain sides of the unit, the dividing wall between two units, the ceiling and floor and tiled balconies.
@@ -18,15 +16,13 @@
 
 34. As the respondent submitted, the gravamen of the appellant’s claim is that the respondent failed to repair the alleged water-proofing defects in the common property and thereby allowed a state of affairs to continue, such that as a result of water and moisture penetration there was a substantial interference with the appellant’s use and enjoyment of his lot. The appellant’s claim is that the respondent owed a positive duty to repair the common property. The respondent submits, partly in reliance on Thoo, that no such positive duty can arise except under statute.
 
-The Strata Schemes (Freehold Development) Act: Section 21
+    The [Strata Schemes (Freehold Development) Act]: Section 21
 
 35. Section 6(1) and (2) of the SSFD Act provides:
 
-“6   Construction of Act
-
-(1)     This Act shall be read and construed with the Real Property Act 1900 as if it formed part thereof.
-
-(2)     The Real Property Act 1900 applies to lots and common property in the same way as it applies to other land except in so far as any provision of that Act is inconsistent with this Act or is incapable of applying to lots or common property.”
+    “6   Construction of Act
+    (1)     This Act shall be read and construed with the Real Property Act 1900 as if it formed part thereof.
+    (2)     The Real Property Act 1900 applies to lots and common property in the same way as it applies to other land except in so far as any provision of that Act is inconsistent with this Act or is incapable of applying to lots or common property.”
 
 36. Section 18(1) of the SSFD Act provides that upon registration of a strata plan any common property in that plan vests in the body corporate for the estate or interest evidenced by the folio of the register comprising the land the subject of the plan but freed and discharged from any mortgage charge, covenant charge, lease, writ or caveat affecting that land immediately before registration of the plan. The “body corporate” means an owners corporation constituted under s 11 of the SSM Act. Section 20 of the SSFD Act provides that the estate or interest of the owners corporation in common property that is vested in it is held by it as agent for the proprietors of the lots and if there is more than one proprietor, as tenants in common in shares proportional to the unit entitlements of their respective lots. Section 24(2) provides that the beneficial interest of a proprietor of a lot in the estate or interest in the common property held by the owners corporation as agent for that proprietor cannot be severed from or dealt with, except in conjunction with the lot.
 
@@ -48,11 +44,11 @@ The Strata Schemes (Freehold Development) Act: Section 21
 
 45. In Thoo Tobias AJA added the following (at [141] and [142]):
 
-“[141]    The negative quality of such general law duties as arise from the trustee status of the owners corporation with respect to common property is emphasized by s 21 of the [SSFD Act]:
+    “[141]    The negative quality of such general law duties as arise from the trustee status of the owners corporation with respect to common property is emphasized by s 21 of the [SSFD Act]:
 
-Common property shall not be capable of being dealt with except in accordance with the provisions of this Act and the Strata Schemes Management Act 1996.
+    Common property shall not be capable of being dealt with except in accordance with the provisions of this Act and the Strata Schemes Management Act 1996.
 
-[142]    The expression ‘deal with’, used in relation to property, is wide. It would clearly include any action required to be taken by the owners corporation pursuant to ss 62(1) and (2), subject to the passing of a special resolution pursuant to s 62(3). In that respect any equitable right of a lot owner to require the owners corporation to replace the MEVS, as Dr Thoo seeks, would be trumped by a valid special resolution passed pursuant to s 62(3). The purpose of s 21 is clearly to preclude any form of action by the owners corporation in relation to the common property that is not contemplated and expressly permitted by the strata titles legislation.”
+    [142]    The expression ‘deal with’, used in relation to property, is wide. It would clearly include any action required to be taken by the owners corporation pursuant to ss 62(1) and (2), subject to the passing of a special resolution pursuant to s 62(3). In that respect any equitable right of a lot owner to require the owners corporation to replace the MEVS, as Dr Thoo seeks, would be trumped by a valid special resolution passed pursuant to s 62(3). The purpose of s 21 is clearly to preclude any form of action by the owners corporation in relation to the common property that is not contemplated and expressly permitted by the strata titles legislation.”
 
 46. Again, his Honour was addressing the rights arising from the exercise of the powers of the owners corporation and lot owners with respect to the common property. His Honour was not addressing the duties owed by the owners corporation as the legal owner of the common property to persons owning other property, whether as lot owners or outside the strata scheme.
 

@@ -1,80 +1,81 @@
 import '../styles/demo/layout.less'
-import html from '../demo/html'
-import din from '../test/fixt/in'
-import dup from '../test/fixt/up.md'
-
-import marked  from 'marked'
+import html from './html'
 import focusd from '../lib/focusd'
-import transforms from '../demo/transforms'
+import transforms from './transforms'
+import d from './data'
 
-
-var upForm = ['json','compact']
-var inType = ['doc','mail','law','case','img']
+var fmt = ['json','short','compact']
+var types = ['doc','mail','law','case','img']
 var ops = {
-  markupFormat:  upForm[0],
-  transforms:    transforms,
+  markupFormat:  'json',
   transform: {
     type: {
-      case: {    rendered: ['li_counter_set'] },
-      law: {     pre: ['law_lists'] }
+      case: {    pre: ['lref'], rendered: ['ol_start'] },
+      law: {     pre: ['law_li','lref'] }
     }
   },
-  types:         inType
+  transforms:    transforms,
+  types:         types
 }
 
-
+/*
+ */
 function r() {
-  doc.prv('rendering', true)
+  doc.prv('', true)
 
-  doc.checkd('tupcompact', function(){ ops.markupFormat = 'compact' })
+  doc.checkd('tupcompact', function() { ops.markupFormat = 'compact' })
 
   var mup      = focusd.parse(el.up.value, ops)
   el.upf.value = JSON.stringify(mup.focus, null, ' ')
   el.upi.value = JSON.stringify(mup.in, null, ' ')
 
-  var ins = []
-  for (var i=0;i<ins.length;i++) {
+  var srcs = []
+  for (var i=0; i<ins.length; i++) {
     mup.in[i] = mup.in[i] || {}
-    ins.push(el['in'+i].value)
-    inTypes.forEach(function(t) {
+    srcs.push(el['in'+i].value)
+    types.forEach(function(t) {
       doc.checkd('tin'+i+t, function() { mup.in[i].type = t })
     })
   }
-  var output = focusd(ins, mup, ops, function(e, r) {
+  var output = focusd(srcs, mup, ops, function(e, key, val) {
     if (e) doc.prv('<p class="error">'+e.toString()+'</p>')
-    else doc.prv('<p class="ok">'+r.toString()+'</p>')
+    else {
+      if (el[key]!= null) el[key].value = val
+      doc.prv('<p class="ok">'+key+'</p>')
+      console.log(key, '.val=', val.split('\n')[0])
+    }
   })
 
   doc.prv(output, true)
-  el.out.value = output
+  el.rendered.value = output
+  cd.innerText = output.replace('</div>','\n</div>')
 
-  for (var id in el) doc.ta_scroll(id)
+  for (var id in el)
+    doc.taScroll(id)
 }
 
-
 var doc = html('demo', 'focusd demo', {ruler:1,onload:r})
+var cd = doc.child('code', '\nr\ne\nn\nd\ne\nr\ni\nn\ng', 'html language-html', 'out', doc.child('pre'))
 var t = doc.ta
+var ins = []
+for (var n in d._in) {
+  console.log('in'+ins.length, n, n.split('_')[0])
+  ins.push(t('in'+ins.length, d._in[n], n.split('_')[0], types))
+}
 var ups = [
   t('upi', ''),
-  t('up', dup.js['sma-fin-mgt'].trim(), 'json', upForm),
+  t('up', d._up, 'json', fmt),
   t('upf', '')
 ]
-var ins = [
-  t('in0', din.doc['cash-mth'], 'doc', inType),
-  t('in1', din.law['ssma-p5'], 'law', inType),
-  t('in2', din.case['cl-meta'], 'case', inType)
-]
 var prc = [
-//pre: ta('pre', ''),
-//pst: ta('pst', ''),
-  t('out', '')
-//child('li',null,null,null,ul);
+  t('in0_pre', ''),
+  t('in0_post', ''),
+  t('in0_rendered', ''),
+  t('rendered', '')
 ]
 var el = doc.el(ups, ins, prc)
 
-
 if (module.hot)
   module.hot.accept('../lib/focusd', function() {
-    console.log('\n--- HOT: ../lib/focusd')
-    rfsh()
+    r(console.log('[HOT] ../lib/focusd'))
   })

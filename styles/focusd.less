@@ -1,101 +1,50 @@
-@import './mail.css';
-@import './doc.css';
-@import './article.css';
-@import './demo/case.css';
-@import './demo/law.css';
+@import './notate';
+@import './mail';
+@import './doc';
+@import './demo/case';
+@import './demo/law';
+
+
+aside {
+  table {  width:100%;
+           border:0; }
+  th {     margin:0;
+           padding:0;
+           border:none;
+           vertical-align:top; }
+  p {      max-width:99%; } 
+  ul, ol { margin:0;padding:0 }
+  ul {     list-style-type:none } }
+
+.focusd figure {
+  float:left;
+  display:block;
+  box-sizing:content-box;
+  padding:1px 0 3px 0;
+  z-index:1;
+  position:relative;
+}
 
 /*
+th>figure, th>ol { margin:0;padding:15px; }
+th>figure { font-size:0.75em;font-weight:normal;font-family:courier;text-align:justify;letter-spacing:-0.05em;
+         background:#f8f8f8;color:gray;line-height:1.5em; }
+th>figure mark, th>ol li a { color:black;padding:0;letter-spacing:0px }
+th>figure mark > sup { font-weight:bold;font-size:11px;color:#232323;background:rgb(155,155,155,0.5);
+  border:2px solid #f8f8f8;border-radius:50%;padding:2px 5px;margin:-.15em -4px 0 -3px;
+    text-align:center;vertical-align:middle;display:inline-block;
+    height:1.85em; }
+th>figure mark > sup > i { font-size:0.9em;font-weight:normal;font-style:normal }
+th>ol { font-weight:normal;text-align:left;padding-right:0 }
+th>ol li { font-size:0.9em; }
+th>ol li > a { font-weight:bold;font-size:0.9em!important;font-family:courier;letter-spacing:-1px;padding:2px 4px }
+
 table tr {
   background-color:#fff;
   border-top: 1px solid #c6cbd1;
 }
 table tr:nth-child(2n) {
   background-color: #f6f8fa;
-}*/
+}
+*/
 
-.focusd > div:first-child {
-  float:left;
-  color:black;
-}
-
-.focusd > div:last-child {
-  float:left;
-  /*border-left:solid hsl(0,0%,70%,25%) 320px;*/
-  /*background:blue;*/
-}
-
-.focusd > figure {
-  z-index:1;
-  position:relative;
-  box-sizing:content-box;
-  width:480px;
-  padding:10px;
-  font-family:courier;
-  font-size:10px;
-  display:block;
-  float:left;
-
-}
-.focusd > figure {
-  display:block }
-.focusd > figure ul {
-  list-style-type:none;margin:0;padding:0
-}
-
-.focusd > div > q {
-  z-index:1;
-  position:relative;
-  background:white;
-  display:block;
-  font-size:10px;
-  width:320px;
-}
-.focusd > div > q:before { content:'' }
-
-mark {
-  position:relative;
-  /*padding-left:0.9em;*/
-  margin-left:5px;
-  display:inline;
-}
-mark.hi1 {
-  color:black;
-  background:hsl(120,100%,90%,60%);
-}
-mark.hi2 {
-  color:black;
-  background:hsl(215,100%,85%,60%);
-}
-mark > i {
-  position:absolute;
-  left:-1.5em;
-  top:-0.8em;
-  display:block;
-  text-align:center;
-  font-size:0.85em;
-  font-family:arial;
-  font-style:normal;
-  font-weight:bold;
-  text-align:center;
-  color:black;
-  border:solid 2px hsl(60,95%,40%,30%)!important;
-  background:hsl(60,95%,50%)!important;
-  border-radius:50%;
-  width:1.1em;
-  height:1.1em;
-  opacity:0.6;
-}
-mark.hi1 i {
-  color:black;
-  border:solid 2px hsl(120,100%,20%,40%)!important;
-  background:hsl(120,100%,90%,50%);
-}
-mark.hi2 i {
-  color:black;
-  border:solid 2px hsl(215,100%,45%,50%)!important;
-  background:hsl(215,100%,85%,50%);
-}
-
-  .mk1669_1 { background:rgb(252,252,58,.5) }
-  .mk1669_2 { background:rgb(92,238,51,1) }
-  .mk1669_3 { background:rgb(252,252,58,.25) }

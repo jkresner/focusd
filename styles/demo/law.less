@@ -1,0 +1,100 @@
+.focusd .law {
+  margin:10px 0;
+  padding-bottom:1em;
+  width:320px;
+  border:solid 2px hsl(215,100%,90%,100%);
+  border-left:none;
+  border-right:none;
+  color:hsl(215,100%,2%,95%);
+  font-size:11px;
+  font-family:Times New Roman;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin:1em 0 0.3em 0;
+    font-family:arial; }
+
+  a { text-decoration:none;
+      color:#3170ab;
+      font-style:italic }
+
+  p, li { 
+    margin:2px 0 4px 4px;
+    line-height:1.15em 
+  }
+
+
+  li > strong { font:bold 0.9em arial;
+    em { font:bold 1.1 Times New Roman } }
+
+  blockquote { 
+    margin:0;
+    padding:0;
+    border:none;
+    &> { margin:2px 5px; }
+    > p {
+      font:0.75em arial;
+      > em { font-weight:bold } } }
+  
+
+  ol { counter-reset:dlist;
+    > li:before { counter-increment:dlist;content:"(" counter(dlist, decimal) ") "; } }
+  ul { counter-reset:alist; 
+    > li:before { counter-increment:alist;content:"(" counter(alist, lower-alpha) ") "; } }
+  blockquote > ol {     
+    counter-reset:rlist;
+    > li:before { counter-increment:rlist;content:"(" counter(rlist, lower-roman) ") ";left:-2em } }  
+
+  ol, ul { 
+    margin:0; 
+    padding:5px 0 1px 1.4em;
+    font-size:0.98em;
+    list-style:none  }
+  
+  > ol, > ul { padding:5px 0 1px 1.5em;font-size:.96em; }
+  
+  li { position:relative; 
+       padding:0;
+    &:before {       
+      position:absolute;
+      left: -1.5em;
+      opacity:0.6; } }
+}
+
+
+/*  
+
+.focusd > figure {
+  display:block }
+
+.focusd > div > q {
+  z-index:1;
+  position:relative;
+  background:white;
+  display:block;
+  font-size:10px;
+  width:320px;
+}
+.focusd > div > q:before { content:'' }
+ 
+  dfn { clear:both;font-weight:bold;font-style:normal;display:block;margin:5px 0 0 0;padding:0;font-family:arial  }
+  dfn var { opacity:0.7;text-align:right;padding-right:8px;display:inline-block;font-style:normal;font-weight:normal;min-width:36px  }
+  dl { position:absolute;opacity:0.65;top:0;right:-5px;line-height:18px;text-align:right;font-size:11px; }
+  dt { background:#a3a3a3;color:white;font-weight:normal;font-family:arial;display:inline-block;float:right;margin:5px;padding:0px 7px;border-radius:4px; }
+  dd { display:none }
+
+  .focusd .law section { 
+   padding:0;
+   margin:0 0 0 40px; 
+   >blockquote {
+     ol { list-style:none;padding:4px 0 3px 12px;
+     li { margin-left:0px;margin-top:4px; }
+     >blockquote > ol { margin-left:0px;font-size:0.95em }
+     >blockquote>blockquote > ol { margin-left:0px }
+     > ol > li { counter-increment:c1; }
+     > blockquote > ol > li { counter-increment:c2 }
+     blockquote blockquote > ol > li { counter-increment:c3; }
+     li:before { display:inline-block;vertical-align:top;margin-top:0px;margin-left:-16px;
+                width:16px;padding:0 2px 0 0;color:#17394d;font-size:0.95em;font-weight:100;letter-spacing:-0.03em; }
+     > ol > li:before { content: "(" counter(c1,decimal) ")" }
+     blockquote > ol > li:before { content: "(" counter(c2,lower-alpha) ")" }
+     blockquote blockquote > ol > li:before { content: "(" counter(c3,lower-roman) ")"; } }*/

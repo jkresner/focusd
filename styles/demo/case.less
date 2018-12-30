@@ -1,0 +1,42 @@
+.focusd .case {
+  margin-left:2.5%;
+  width:320px;
+  border:none;
+  background:hsla(180,100%,20%,0.15);
+  color:hsla(180,100%,5%,.99); 
+  font:11px "Arial", Hel  vetica, Arial, sans-serif;
+  text-align:justify;
+
+  a { text-decoration:none;
+      font-style:italic;
+      font-size:0.9em; }
+
+  * { vertical-align:top }
+  
+  blockquote {
+    margin:0 0 0 .75em;
+    padding:0;
+    font-size:0.9em;
+    p { margin-bottom:2px } }
+
+  td { 
+    ol, ul { 
+      li { text-align:left;
+           margin-bottom:3px; } }
+    a { display:block }
+  }
+
+  > ol {
+    margin:0 0.15em 0 0.2em;
+    padding-bottom:5px;
+    counter-reset:cl;
+    list-style-type:none;
+    > li { 
+      position:relative; 
+      &:before {
+        position:absolute;
+        margin:1px 0 0 -2em;
+        color:black;
+        font:bold 0.9em courier;
+        counter-increment:cl;
+        content:counter(cl);   } } } }
