@@ -13,7 +13,7 @@ console.log(`
 module.exports = {
   mode: 'development',
   entry: {
-      index: join(dir_root,'index.js')
+      index: join(dir_root,'app.js')
   },
   devtool: 'inline-source-map',
   devServer: {

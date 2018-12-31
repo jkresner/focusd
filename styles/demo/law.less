@@ -1,3 +1,21 @@
+  // Table of contents
+.focusd .law h1+ul {
+  margin:0;padding:0;
+  a { font:bold 1em arial; } 
+  li { margin:0;
+    padding:1px 0;
+    list-style:none; 
+    &:before { content:'' } } 
+  ul { margin:5px 2px;
+    padding:0;
+    li { padding:1px 0 1px 25px; }
+    a { font-weight:normal } 
+    em { position:absolute;
+        left:2px;
+        width:18px;
+        text-align: right;
+        font-style:normal; } } }
+
 .focusd .law {
   margin:10px 0;
   padding-bottom:1em;
@@ -10,30 +28,38 @@
   font-family:Times New Roman;
 
   h1, h2, h3, h4, h5, h6 {
-    margin:1em 0 0.3em 0;
+    margin:.75em 0 0.25em 0;
     font-family:arial; }
 
   a { text-decoration:none;
       color:#3170ab;
       font-style:italic }
 
-  p, li { 
-    margin:2px 0 4px 4px;
-    line-height:1.15em 
-  }
-
-
-  li > strong { font:bold 0.9em arial;
-    em { font:bold 1.1 Times New Roman } }
-
   blockquote { 
     margin:0;
     padding:0;
     border:none;
-    &> { margin:2px 5px; }
+    >& { margin:.5em 0 0 0;
+      > p { margin:0 0 0 .5em }
+    }
     > p {
       font:0.75em arial;
-      > em { font-weight:bold } } }
+      > em { font-weight:bold;font-style:normal;opacity:0.7 } } }
+
+  
+  li { 
+    position:relative; 
+    margin:3px 0 4px 0px;
+    padding:0;
+    line-height:1.15em;    
+    > strong { 
+      font:bold 0.9em arial;
+      em {   
+        font:bold 1.1 Times New Roman } }
+    &:before {       
+      position:absolute;
+      left: -1.5em;
+      opacity:0.75; } }
   
 
   ol { counter-reset:dlist;
@@ -46,18 +72,20 @@
 
   ol, ul { 
     margin:0; 
-    padding:5px 0 1px 1.4em;
+    padding:3px 0 1px 1.4em;
     font-size:0.98em;
     list-style:none  }
   
-  > ol, > ul { padding:5px 0 1px 1.5em;font-size:.96em; }
-  
-  li { position:relative; 
-       padding:0;
-    &:before {       
-      position:absolute;
-      left: -1.5em;
-      opacity:0.6; } }
+  > ol, > ul { 
+    padding:5px 0 1px 1.5em;
+    font-size:.96em; 
+    > li { 
+      line-height:1.15em;
+      margin:.15em 0 .5em .5em }
+  }
+  p { line-height:1em;margin:.25em 0 0px 0;padding:1px 0 1px 0 }
+  > p { line-height:1.15em;margin:.5em 0 0 .5em }
+
 }
 
 

@@ -10,7 +10,7 @@ var ops = {
   markupFormat:  'json',
   transform: {
     type: {
-      case: {    pre: ['lref'], rendered: ['ol_start'] },
+      case: {    pre: ['lref','cref'], rendered: ['ol_start'] },
       law: {     pre: ['law_li','lref'] }
     }
   },

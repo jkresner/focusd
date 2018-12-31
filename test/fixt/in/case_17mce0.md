@@ -8,13 +8,13 @@
  _Hearing dates:_           | 25 July 2017                                  
  _Decision date:_           | 20 September 2017                             
  _Before:_                  | Basten JA at [1];  \\nWhite JA at [5];  \\nSackville AJA at [73] 
-  _Decision:_               | [#1] 
-  _Catchwords:_             | REAL PROPERTY — Strata title — General matters — whether Ch 5 of the Strata Schemes Management Act 1996 (NSW) has the effect of excluding a claim for common law damages — construction of s 226 of the Strata Schemes Management Act 1996 (NSW) — whether appellant has a right or remedy arising “apart from this Act” — whether appellant’s right to sue at common law is preserved by s 226 
-  _Legislation Cited:_      | [Real Property Act 1900]\(NSW\) s 3  [Strata Schemes (Freehold Development) Act 1973] ss 6, 21  [Strata Schemes Management Act 1996]\(NSW\) ss 61, 62, 138, 226  [Strata Schemes Management Act 2015]\(NSW\) Sch 3, Pt 2, cl 7  [Supreme Court Act 1970]\(NSW\) s 103 
-  _Cases Cited:_            | [#2] 
-  _Category:_               | Principal judgment                            
-  _Parties:_                | Paul Gerard McElwaine (Appellant)  \\nThe Owners, Strata Plan 75975 (Respondent)                             |
-  _Representation:_         | *Counsel*R J de Meyrick (Appellant)  \\nA J McInerney SC with T O Prince (Respondent)  \\n\\n*Solicitors*Kerin Benson Lawyers (Appellant)  \\nSparke Helmore Lawyers (Respondent) 
+ _Decision:_                | [#1] 
+ _Catchwords:_              | REAL PROPERTY — Strata title — General matters — whether Ch 5 of the Strata Schemes Management Act 1996 (NSW) has the effect of excluding a claim for common law damages — construction of s 226 of the Strata Schemes Management Act 1996 (NSW) — whether appellant has a right or remedy arising “apart from this Act” — whether appellant’s right to sue at common law is preserved by s 226 
+ _Legislation Cited:_       | [Real Property Act 1900]\(NSW\) s 3  [Strata Schemes (Freehold Development) Act 1973] ss 6, 21  [Strata Schemes Management Act 1996]\(NSW\) ss 61, 62, 138, 226  [Strata Schemes Management Act 2015]\(NSW\) Sch 3, Pt 2, cl 7  [Supreme Court Act 1970]\(NSW\) s 103 
+ _Cases Cited:_             | [#2] 
+ _Category:_                | Principal judgment                            
+ _Parties:_                 | Paul Gerard McElwaine (Appellant)  \\nThe Owners, Strata Plan 75975 (Respondent)                             |
+ _Representation:_          | *Counsel*R J de Meyrick (Appellant)  \\nA J McInerney SC with T O Prince (Respondent)  \\n\\n*Solicitors*Kerin Benson Lawyers (Appellant)  \\nSparke Helmore Lawyers (Respondent) 
  _File Number(s)_           | 2016/365130;2017/161867                       
  _Decision under appeal:_   | _Court or tribunal_ Supreme Court   _Jurisdiction_ Equity Division _Citation_ [2016] NSWSC 1589 _Date of Decision_ 10 November 2016 _Before_ Young AJ _File Number(s)_ 2013/188816
 
@@ -49,5 +49,5 @@
 – Owners - Strata Plan No 43551 v Walter Construction Group Ltd (2004) 62 NSWLR 169; [2004] NSWCA 429
 - Potter v Minahan (1908) 7 CLR 277; [1908] HCA 63
 - Saeed v Minister for Immigration and Citizenship (2010) 241 CLR 252; [2010] HCA 23
-- The Owners Strata Plan 50276 v Thoo [2013] NSWCA 270; (2013) 17 BPR 33,789
+- [The Owners Strata Plan 50276 v Thoo \[2013\] NSWCA 270]; (2013) 17 BPR 33,789
 - Tiufino v Warland (2000) 50 NSWLR 104; [2000] NSWCA 110

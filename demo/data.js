@@ -1,5 +1,5 @@
 // 'law-cr80.md',
-// 'law-ft87p3.md','law-ft87p4.md','law-ft87p6.md','law-ft87t.html',
+// 'law-ft87p03-06.md,'law-ft87t.html',
 // 'law-it87t.html','law-it87w.html',
 // 'law-lm69t.html','law-lm69w.html',
 // 'law-sm15p06.md','law-sm15s106.html',
@@ -10,20 +10,35 @@
 var __in = require('../test/fixt/in.md')
 var _in = {};
 [
+// ,'case_17shm0.md'
+// ,'case_18shm0.md'
+
+,'law_it87t.md',
 // ,'law_sm15p07-10.md',
-,'law_sm15p12-14.md',
-// ,'law_sm15c01-2.md
+// ,'law_sm15p12-14.md',
+// ,'law_sm15c01-2.md'
+
 // ,'doc_1704cash.md',
 // ,'case_17mce0.md'
 // ,'case_17mce1.md'
-,'case_17mce2.md'
+// ,'case_17mce2.md'
 ].forEach(function(id) { _in[id] = __in[id] })
 
 
 module.exports = { _in:_in, _up: JSON.stringify({
   in: [
     { type:      'law',
-      name:      'Strata Schemes Management Act 2015 Part 7-9',
+      name:      'Intepretation Act 1987 Table of Contents',
+      baseUrl:   'https://www.legislation.nsw.gov.au/~/view/act/1987/15'
+    },
+    { type:      'law',
+      name:      'Strata Schemes Management Act 2015 Sch 1-1',
+    },
+    { type:      'case',
+      name:      'Shum meta',
+    },
+    { type:      'law',
+      name:      'Strata Schemes Management Act 2015 Part 7-10',
     },
     { type:      'case',
       name:      'McElwain part 2',
