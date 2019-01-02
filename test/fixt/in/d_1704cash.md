@@ -8,7 +8,7 @@ Lot | Owner | Levies  \\ndue | Levies  \\npaid | Interest  \\npaid | Total  \\np
  1   | xxxxxxxxx | 0.00     | 0.00    | 0.00    | 0.00   | 0.00    | NIL     
  6   | xxxxxxxxx | 0.00     | 0.00    | 0.00    | 0.00   | 0.00    | 9.43    
  9   | xxxxxxxxx | 254.47   | 12.54   | 267.01  | 0.00   | 0.00    | 1,442.60 
- 36  | J Kresner | ***0.00*** | 0.00  | 0.00    | 0.00   | 0.00    | ***NIL*** 
+ 36  | Jonathon S. Kresner | ***0.00*** | 0.00  | 0.00    | 0.00   | 0.00    | ***NIL*** 
  37  | xxxxxxxxx | 0.00    | 1,023.00 | 0.00    | 1,023.00 | 0.00  | NIL    
      |           | ------- | ------- | ------- | ------- | ------- | -------- 
      |           | **0** | **12,667.01** | **12.63**  | **12,679.64** | **0**    
@@ -20,7 +20,7 @@ Lot | Owner     | Levies  \\ndue | Levies  \\npaid   | Interest  \\npaid | Total
  1   | xxxxxxxxx | 0.00    | 0.00    | 0.00    | 0.00    | 0.00    | NIL     
  6   | xxxxxxxxx | 0.00    | 0.00    | 0.00    | 0.00    | 0.00    | NIL     
  9   | xxxxxxxxx | 0.00    | 131.47  | 1.52    | 132.99  | 0.00    | 99.52   
- 36  | J Kresner | ***0.00*** | 0.00 | 0.00    | 0.00    | 0.00    | ***NIL*** 
+ 36  | Jonathon S. Kresner | ***0.00*** | 0.00 | 0.00    | 0.00    | 0.00    | ***NIL*** 
  37  | xxxxxxxxx | 0.00    | 528.55  | 0.00    | 528.55  | 0.00    | NIL     
      |           | ------- | ------- | ------- | ------- | ------- | ------- 
      |           |  **0** | **6,542.28** | **1.52** | **6,543.80** | **0**        
@@ -66,7 +66,7 @@ Date  | Ref    | Details                         | Admin       | Capital W
 28/04 | EFT397 | O'Neill Strata Management Pty Ltd: Photocopying April 2017 | 691.90 | 
 28/04 | EFT397 | O'Neill Strata Management Pty Ltd: Postage (Large Envelope) April 2017 | 4.40 | 
 28/04 | EFT397 | O'Neill Strata Management Pty Ltd: Postage (Medium Envelope) April 2017 | 122.10 |
-      | -------- |                            | --------      | --------  
+------- | -------- |                          | --------      | --------  
       |          |                            | **87,977.84** | **158,865.38** 
 
 

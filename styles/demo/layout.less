@@ -2,6 +2,7 @@
 
 body#demo {
   margin:0;padding:0;
+  background:#eee;
   font-size:15px;
   > * { display:block;padding:0px 2px;list-style:none; }
   > h1 {
@@ -14,12 +15,12 @@ body#demo {
   > ol {
     opacity:0.1;
 /*    display:none;*/
-    margin:5px 0;
+    margin:5px 0 0 0;
     font:bold 8px courier;
     text-align:right;
     li {
       border:none;border-top:dotted 1px black;
-      height:0.9em;
+      height:0.5em;
       position:relative;
       margin-right:20px; }
     .px32 { width:320px }
@@ -132,24 +133,24 @@ body#demo {
   > pre {
     padding:10px 0 0 10px;
     position:absolute;
-    top:0px;
+    top:-10px;
     // bottom:0px;
     width:4%;
-    max-height:30px;
+    max-height:22px;
     overflow:hidden;
-    background:#eee;
+    background:#bbb;
     border-top-right-radius:25px;
     opacity:0.1; 
     margin-left:6px;
-    // &:hover {
-    //   width:90%;
+    &:hover {
+      width:96%;
     //   height:inherit;
     //   overflow-x:scroll;
     //   overflow-y:none;
     //   min-width:95%;
     //   margin-left:1.5%;
     //   opacity:0.9;
-    // }    
+    }    
     > code { 
       margin:0;
       padding:0;

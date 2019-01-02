@@ -1,31 +1,43 @@
-// 'law-cr80.md',
-// 'law-ft87p03-06.md,'law-ft87t.html',
-// 'law-it87t.html','law-it87w.html',
-// 'law-lm69t.html','law-lm69w.html',
-// 'law-sm15p06.md','law-sm15s106.html',
-// 'ptt_m.md','ptt_ms-harrassd.md','ptt_ms-vernacular.md','ptt_mt.md'
-// ]
+var __in = Object.assign(
+  require('../test/fixt/in.md'),
+  require('../test/fixt/set/ptt/in.md')
+)
 
 
-var __in = require('../test/fixt/in.md')
-var _in = {};
-[
-// ,'case_17shm0.md'
-// ,'case_18shm0.md'
+var _in = [
+// ,'c_17mce0'
+// ,'c_17mce1'
+// ,'c_17mce2'
+// ,'c_17shm0'
+// ,'c_18shm0'
+// ,'l_ft87p03-7'
+// ,'l_it87t'
+// ,'l_sm15p06'
+// ,'l_sm15p07-10'
+// ,'l_sm15p12-14'
+// ,'l_sm15c01-2'
+'d_1704cash',
+'m_ptt',
+//,'m_s_harrassd'
+//,'m_s_vernacular'
+// ,'m_t_ants'
+'l_474.15',
+'l_cv07p01-3',
+'d_1806boe',
+'d_1807attend'
+].map(function(key) { return { 
+    md:  __in[key+'.md'],
+    id:  key
+      .replace('c_','case_')
+      .replace('d_','doc_')
+      .replace('l_','law_')
+      .replace('i_','img_')
+      .replace('m_','mail_') 
+  }
+})
 
-,'law_it87t.md',
-// ,'law_sm15p07-10.md',
-// ,'law_sm15p12-14.md',
-// ,'law_sm15c01-2.md'
 
-// ,'doc_1704cash.md',
-// ,'case_17mce0.md'
-// ,'case_17mce1.md'
-// ,'case_17mce2.md'
-].forEach(function(id) { _in[id] = __in[id] })
-
-
-module.exports = { _in:_in, _up: JSON.stringify({
+var _up = JSON.stringify({
   in: [
     { type:      'law',
       name:      'Intepretation Act 1987 Table of Contents',
@@ -61,5 +73,7 @@ module.exports = { _in:_in, _up: JSON.stringify({
   focus: [
 //    { note: 'not`in heres yet', mark: [] }
   ]
-  }, null, ' ') 
-}
+}, null, ' ')
+
+
+module.exports = { in: _in, up: _up }

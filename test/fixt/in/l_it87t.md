@@ -29,7 +29,7 @@
 + [Part 3 Commencement of Acts and instruments](/part3)
   - [_22_  References to enactment etc of Acts](/part3/sec22)
   - [_23_  Commencement of Acts](/part3/sec23)
-  - [_24_  Time of commencement of Acts and rules](/part3/sec24statutory)
+  - [_24_  Time of commencement of Acts and rules](/part3/sec24statutwory)
   - [_25_  References to commencement of Acts and instruments](/part3/sec25)
   - [_26_  Exercise of certain powers between and commencement of Acts and making and commencement of instruments](/part3/sec26) 
 + [Part 4 Amendments and repeals](/part4)

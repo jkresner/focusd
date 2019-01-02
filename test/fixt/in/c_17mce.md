@@ -1,0 +1,22 @@
+# McElwaine v The Owners - Strata Plan 75975 [2017] NSWCA 239
+
+##### Basten JA, White JA, Sackville AJA
+
+The Court of Appeal has allowed an appeal against a finding that the effect of Chapter 5 of the Strata Schemes Management Act 1996 (NSW) (the “SSM Act”) is that an owner has no remedy against an owners corporation for a claim for common law damages in nuisance.
+Mr McElwaine owned a unit in a building which was managed by The Owners - Strata Plan 75975 (the “Owners Corporation”). Mr McElwaine alleged that the Owners Corporation had failed to repair waterproofing defects in the common property of the building, which resulted in water damage to his unit. He commenced proceedings in the Supreme Court claiming that the Owners Corporation breached a common law duty to fix the defect and sought relief in the form of common law damages.
+The Owners Corporation accepted that they had a statutory duty under s 62 of the SSM Act to keep the common property in good repair, but that they had no positive, common law duty to do so. Regardless, the Owners Corporation took the view that the only remedies available to Mr McElwaine were confined to what is contained in Ch 5 of the SSM Act, which does not include an award for damages.
+The parties asked the primary judge to answer the following preliminary question:
+
+Whether the legal effect of Ch 5 of the SSM Act is that Mr McElwaine has no remedy against the Owners Corporation in common law nuisance in respect of the claim pleaded in the proposed Further Amended Statement of Claim.
+The primary judge answered that question in the positive and concluded that the SSM Act operates so that Mr McElwaine has no remedy against the Owners Corporation in common law nuisance in relation to his claim.
+His Honour found that common property could only be dealt with in accordance with the SSM Act. Relying on Ridis v Strata Plan 10308 and Owners Strata Plan 50276 v Thoo, his Honour found that Mr McElwaine did not have a right in relation to his unit or the common property that arose separately from the SSM Act. His Honour determined that those decisions meant that damages were not available for breaches of s 62, and that this pointed to a conclusion that remedies for breach of a statutory duty were confined to those contained in Ch 5. Further, the primary judge found that the legislative intention behind the SSM Act was that disputes, whether or not they involved a common law right, were to be dealt with in the adjudication system in Ch 5.
+In light of his Honour’s conclusions, the primary judge dismissed Mr McElwaine’s claim.
+This summary has been prepared for general information only. It is not intended to be a substitute for the judgment of the Court or to be used in any later consideration of the Court’s judgment.
+  
+- - - - - - - - - - - - - - - - - - - - - - - -
+
+The main issues on appeal were whether the SSM Act excluded common law rights that arose separately to the SSM Act; and whether the remedies for breach were confined to that contained in Ch 5.
+The Court of Appeal found that the SSM Act does not exclude the common law duties and rights of owners corporations and lot owners. The Court observed that it does not follow from the decisions of Ridis and Thoo that the SSM Act precludes common law rights and remedies. Those decisions concerned breaches by the owners corporation of its duty to repair under the SSM Act, and whether damages could be awarded for breach of that duty. The fact that the Court in Thoo (adopting what was said in Ridis) found that damages could not be awarded for breach of a duty under the SSM Act does not suggest that the SSM Act excludes all other rights, or that the only remedies available are those contained in Ch 5.
+The Court also found that there is nothing in the SSM Act that indicates a legislative intention to affect a lot owner’s common law right to sue the owners corporation in common law in relation to its management of the common property. Moreover, the Court found that s 226 of the SSM Act expressly preserves a lot owner’s right to recover damages at common law for breach by an owners corporation of a common law duty.
+In light of its findings, the Court remitted the proceedings back to the Equity division for determination of Mr McElwaine’s claim in nuisance against the Owners Corporation.
+This summary has been prepared for general information only. It is not intended to be a substitute for the judgment of the Court or to be used in any later consideration of the Court’s judgment.

@@ -1,7 +1,117 @@
 .focusd .mail {
-  border-top:dashed 2px hsl(30,50%,40%,70%);
-  /*border-bottom:solid 2px hsl(30,50%,85%,100%);*/
-  background:hsl(30,50%,85%,10%);
-  color:hsl(30,50%,10%,95%);
-  font:12px courier;
+  padding:1px 2px 1px 1px;
+  width:480px;
+  border-top:dashed 1px hsla(30,50%,90%);
+  border-bottom:solid 1px hsla(30,50%,85%,100%);
+  background:hsla(30,50%,90%,.3);
+  color:hsla(30,50%,10%,95%);
+  font:normal 12px courier;
+
+  tt { font-weight:bold }
+  time {  float:right;
+    padding:0;
+    margin-right:0.1em;
+    letter-spacing:-0.16em }
+
+  header:before { 
+    display:block;
+    position:absolute;
+    z-index:3;
+    left:2px;
+    top:2px;
+    width:12px;
+    height:12px;
+    background:url(profile_mask.png) center contain no-repeat;
+    // padding:3px;
+    border:dotted 1px #bbb;
+    content:' ';
+    // border-radius:50%;
+  }
+
+  header { padding:4px 4px 4px 20px;position:relative }
+  header cite {               
+    display:none;
+    padding:2px 0 0 0;
+    line-height:1.1em;
+    font:bold normal 1.1em arial;
+    color:black 
+  }
+  section { 
+    padding:0 2px 0 18px;
+    white-space:pre-wrap;
+  }
+
+  .swap header cite {  display:block }
+ 
+  // section {  padding:0px 0px 3px 0px;
+  //   line-height:18px;
+  //   font-family:sans-serif;
+  //   color:#222 }
 }
+
+/*
+.set li.comm {
+  cite:before,
+  header:before {              margin:2px 0 0 0;font-weight:100;
+                               letter-spacing:-1.6px;
+                               overflow:hidden;
+                               white-space:nowrap }
+  header:before {              color:rgb(209,209,209,.5);
+                               border-top:solid 1px gray; }
+  header cite:before{          height:20px;
+                               display:block;
+                               width:700px;
+                               content:'-';
+                               border-top:solid 2px darkgray; }
+ 
+}
+.set li.comm.swap header:before{ content:none }
+
+
+.set .goto {           display:none }
+ins, ins > * {                 font-style:italic;font-weight:normal;
+                               font-size:0.9em;line-height:0.9em;
+                               color:#69b32d;text-decoration:none }
+ins > strong {                 color:red }
+ins > em {                     color:#ff7f2f }
+ins > i {                      color:#752f8a }
+ins > b {                      color:#002664 }
+
+.set section a > img {        opacity:0.98;margin:10px; }
+.set section em {             font-size:0.8em;color:#78909c; }
+
+.set section p {              font-family:sans-serif; }
+.set section > p {            font-size:14px;margin:0;padding:3px 0 4px 0; }
+.set section > p:last-child { padding-bottom:1px }
+.set section h3 {             font-family:'courier';font-weight:bold;
+                              font-size:13px;line-height:14px;letter-spacing:-0.7px;
+                              color:#777;display:block;border-top:solid 1px #f0f0f0;
+                              padding:5px 0 0px 0px;margin:7px 1px 3px 0px  }
+.set section h3 u {           font-weight:normal;text-decoration:none;  }
+.set section h3 em {          display:block;font-style:normal;color:inherit; }
+.set section > table td { font-size:.9em;padding:1px 4px }
+.set section > table tr { font-size:.95em;padding:1px 3px }
+
+.set section > blockquote > blockquote { opacity:1 }
+.set section > blockquote > blockquote > ul { width:104%;height:180px;overflow:hidden;display:table;
+                                               table-layout:fixed;margin:-5px 0 0 -30px;padding:6px 1px }
+.set section > blockquote > blockquote > ul > li { display:inline;width:auto;display:table-cell;padding:0px 4px }
+.set section > blockquote > blockquote > ul > li img { width:100% }
+
+.set figure { color:#752f8a;font-size:12px;padding:5px 2px 7px 2px;text-align:right; }
+.set figure img { max-width:23%; }
+.set figure > img { max-width:100%; }
+.set figure > b {
+  display:inline-block;
+  margin:0 0 0 14px;padding:0px 0px 0px 0px;
+  letter-spacing:-.2px;line-height:11px;
+  font-size:13px;
+  font-weight:bold;
+}
+.set dt { font-family:courier;padding:3px;font-size:11px;font-weight:normal; }
+.set dt i {  }
+.set figure > span::before {
+  padding-top:2px;
+  display:inline-block;line-height:20px;font-size:12px;padding-right:5px;font-weight:normal; }
+  font-style:normal;margin:-22px -2px 15px 8px;padding:5px 15px 0px 15px } 
+*/
