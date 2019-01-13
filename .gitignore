@@ -1,3 +1,7 @@
+# script generated files
+*.md.js
+
+
 # Logs
 *.log
 npm-debug.log*
