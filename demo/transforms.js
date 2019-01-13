@@ -1,49 +1,57 @@
+var authority_lookup = require('./authority')
+
 module.exports = {
 
+  mail_header(md, param, ops) {
+    function encodeLgGg(str) { return str.replace(/[\u00A0-\u9999<>\&]/gim, 
+      function(i) { return `&#${i.charCodeAt(0)};` }) }
 
-  lref(md, param, ops) {
-    return md + `
-[Agricultural Tenancies Act 1990]: //? "AT90"
-[Civil and Administrative Tribunal Act 2013]: //act/2013/2 "CT13"
-[Civil and Administrative Tribunal Rules 2014]: //regulation/2014/26 "CT14"
-[Civil Procedure Act 2005]: //act/2005/28 "CP98"
-[Commercial Arbitration Act 2010]: /? "CA10"
-[Community Land Management Act 1989]: //act/1989/202 "CD89"
-[Conveyancing Act 1919]: //act/1919/6 "CN19"
-[Crimes Act 1900]: //act/1900/40 "CA00"
-[Crimes Amendment (Apprehended Violence) Act 2006]: //act/2006/73 "CV06"
-[Crimes (Domestic and Personal Violence) Act 2007]: //act/2007/80 "CV07" 
-[Crimes Legislation Amendment (Telecommunications Offences and Other Measures) Act]: https://legislation.gov.au/Details/C2006C00305 "CL04"
-[Criminal Code Act 1995]: http://www.legislation.gov.au/ "CA95"
-[Defamation Act 2005]: //act/2005/77 "DA05"
-[Disability Discrimination Act 1992]: https://www.legislation.gov.au/ "DD92"
-[Dividing Fences Act 1991]: //act/1991/72 "DF91"
-[Environmental Planning and Assessment Act 1979]: //ct/1979/203 "EP79"
-[Fines Act 1996]: //act/1996/? "FN96"
-[Home Building Act 1989]: //act/1989/147 "HB89"
-[Interpretation Act 1987]: //act/1987/15 "IT87"
-[Imperial Acts Application Act 1969]: //act/1969/30 "IM69"
-[Legal Profession Act 2004]: //act/2004/112 "LP04"
-[Local Government Act 1993]: //act/1993/30 "LG93"
-[Property, Stock and Business Agents Act 2002]: //act/2002/66 "PA02"
-[Real Property Act 1900]: //act/1900/25 "RP00"
-[Strata Schemes Development Act 2015]: //act/2015/51 "SD15" 
-[Strata Schemes (Freehold Development) Act 1973]: //act/1973/68 "SF76"
-  [Strata Schemes (Freehold Development) Act]: //act/1973/68 "SF76"
-[Strata Schemes (Leasehold Development) Act 1986]: //act/1986/219 "SL86"
-[Strata Schemes Management Act 1996]: //act/1996/138 "SM96"
-[Strata Schemes Management Act 2015]: //act/2015/50 "SM15"
-[Strata Schemes Management Regulation 2010]: //regulation/2010/492 "SM10"
-[Strata Schemes Management Regulation 2016]: //regulation/2016/ "SM16"
-[Supreme Court Act 1970]: //act/1970/? "SC70"
-[Workers Compensation Act 1987]: //act/1987/70 "WC87"
-[Workplace Injury Management and Workers Compensation Act 1998]: //act/1998/86 "WI98"`
-    .replace(/\/\//g, 'https://www.legislation.nsw.gov.au/~/view/')
+    var parts = md.split(/\n\-\-Content\n/ig)
+    if (parts.length != 2) return md
+    var headers = parts[0].split('\n')
+    var h = {d:'',f:'',t:'',s:''}
+    for (var i=0; i< headers.length;i++) {
+      var ln = headers[i]
+      if (/^date: /i.test(ln)) h.d = 
+        '<time>'+moment(ln.replace(/^date: /i,'')).format('DD MMM YYYY, HH:mm')+'</time>'
+      if (/^from: /i.test(ln)) h.f = 
+        '<svg></svg><tt>'+encodeLgGg(ln.replace(/^from: /i,''))+'</tt>'
+      if (/^to: /i.test(ln)) h.t = 
+        '<i>to</i><tt>'+encodeLgGg(ln.replace(/^to: /i,''))+'</tt>'
+      if (/^subject: /i.test(ln)) h.s = 
+        '<cite>Subject: '+ln.replace(/^subject: /i,'')+'</cite>'
+    }
+
+    return '<header>'+h.d+h.f+h.t+h.s+'</header>'
+          +'<section>\n'+parts[1]+'\n</section>'
+  },
+
+  lref(r, param, ops) {
+    var matchList = '\n'
+    for (var auth in authority_lookup) {
+      if (r.indexOf(auth) > -1) matchList += (authority_lookup[auth]+'\n')
+      // r = r.replace(rx, function(m) { 
+        // if (!matchList[m]) 
+        // LOG('m', m)
+        // return m.match
+      // })
+    }    
+    LOG('lref', matchList)
+    return r + matchList
+// [Agricultural Tenancies Act 1990]: //? "AT90"
+// [Civil Procedure Act 2005]: //act/2005/28 "CP98"
+// [Commercial Arbitration Act 2010]: /? "CA10"
+// [Disability Discrimination Act 1992]: https://www.legislation.gov.au/ "DD92"
+// [Fines Act 1996]: //act/1996/? "FN96"
+// [Imperial Acts Application Act 1969]: //act/1969/30 "IM69"
+// [Legal Profession Act 2004]: //act/2004/112 "LP04"
+// [Strata Schemes (Leasehold Development) Act 1986]: //act/1986/219 "SL86"
+// [Strata Schemes Management Regulation 2010]: //regulation/2010/492 "SM10"
   },
 
 
   cref(md, param, ops) {
-    return md + `
+    return md /*+ `
 [Rosenthal v The Owners SP 20211 (2017) NSWCATCD 80]: / "Rosenthal 2017"
 [Chief Commissioner of State Revenue v Smeaton Grange Holdings Pty Ltd 2017 NSWCA 184]: / "" 
 [McElwaine v The Owners – Strata Plan No. 75975 (2017) NSWCA 239]: / ""
@@ -67,7 +75,7 @@ module.exports = {
 [Tiufino v Warland (2000) 50 NSWLR 104; 2000 NSWCA 110]: / ""
 [Balog v Independent Commission Against Corruption (1990) 169 CLR 625; 1990 HCA 28]: / ""
 [National Employers Mutual General Insurance Association Ltd v Manufacturers Mutual Insurance Ltd (1989) 17 NSWLR 223 at 235, 240]: # "" 
-[Potter v Minahan (1908) 7 CLR 277; 1908 HCA 63]: # ""`
+[Potter v Minahan (1908) 7 CLR 277; 1908 HCA 63]: # ""`*/
   },
 
 

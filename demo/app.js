@@ -1,16 +1,21 @@
+window.LOG = function () { if (true)
+  console.log.apply(this, arguments) }
+
 import '../styles/demo/layout.less'
-import '../styles/profile_mask.png'
 import html from './html'
 import focusd from '../lib/focusd'
 import transforms from './transforms'
 import d from './data'
+import moment from 'moment-timezone'
 
+window.moment = moment
 var fmt = ['json','short','compact']
-var types = ['doc','mail','law','case','img']
+var types = ['doc','mail','law','case','img','web']
 var ops = {
-  markupFormat:  'json',
+  markupFormat:  'short',
   transform: {
     type: {
+      mail: {    pre: ['mail_header'] },
       case: {    pre: ['lref','cref'], rendered: ['ol_start'] },
       law: {     pre: ['law_li','lref'] }
     }
@@ -24,7 +29,7 @@ var ops = {
 function r() {
   doc.prv('', true)
 
-  doc.checkd('tupcompact', function() { ops.markupFormat = 'compact' })
+  doc.checkd('tupshort', function() { ops.markupFormat = 'tupshort' })
 
   var mup      = focusd.parse(el.up.value, ops)
   el.upf.value = JSON.stringify(mup.focus, null, ' ')
@@ -32,7 +37,7 @@ function r() {
 
   var v = -1
   var values = ins.map(function(ta) {
-    v++    
+    v++
     mup.in[v] = mup.in[v] || {}
     types.forEach(function(typ) {
       doc.checkd('tin'+v+typ, function() { mup.in[v].type = typ })
@@ -45,7 +50,7 @@ function r() {
     else {
       if (el[key]!= null) el[key].value = val
       doc.prv('<p class="ok">'+key+'</p>')
-      console.log(key, '.val=', val.split('\n')[0])
+      // LOG(key, '.val=', val.split('\n')[0])
     }
   })
 
@@ -60,16 +65,15 @@ function r() {
 var doc = html('demo', 'focusd demo', {ruler:1,onload:r})
 var cd = doc.child('code', '\nr\ne\nn\nd\ne\nr\ni\nn\ng', 'html language-html', 'out', doc.child('pre'))
 var t = doc.ta
-var vals = []
-var ins = d.in.map(function (src, i) {
-  // console.log('in'+i, src.id, src.id.split('_')[0], types)
-  return t('in'+i, src.md, src.id.split('_')[0], types)
-}) 
 var ups = [
   t('upi', ''),
   t('up', d.up, 'json', fmt),
   t('upf', '')
 ]
+var ins = d.in.map(function (src, i) {
+  // console.log('in'+i, src.id, src.id.split('_')[0], types)
+  return t('in'+i, src.md, src.id.split('_')[0], types)
+})
 var prc = [
   t('in0_pre', ''),
   t('in0_post', ''),

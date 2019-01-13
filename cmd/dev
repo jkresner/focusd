@@ -1,0 +1,13 @@
+#!/bin/sh
+alias pdfI='pdfcpu import -v'
+alias pdfS='pdfcpu split -v'
+alias pdfJ='pdfcpu merge -v'
+alias pdfM='pdfcpu extract -mode meta -v'
+alias pdfP='pdfcpu extract -mode images -v'
+alias pdfE='pdfcpu encrypt -v'
+alias pdfD='pdfcpu decrypt -v'
+
+
+killall node
+node_modules/.bin/webpack-dev-server --config cmd/dev.pk.js --open &
+echo "=====> http://localhost:8060/"

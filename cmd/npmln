@@ -1,0 +1,17 @@
+rm -rf node_modules
+npm link screamjs
+npm i
+npm i -D
+npx eslint lib/focusd.js
+npx eslint lib/transform.js
+npx eslint lib/transcribe.js
+npx eslint demo/app.js
+cmd/fixit
+npm test
+killall node
+cmd/dev
+cmd/dist
+rm -f .DS_Store
+npm link
+ls -la
+pwd

@@ -1,14 +1,13 @@
 const {join} = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const {HotModuleReplacementPlugin} = webpack
 
-const dir_root = __dirname
-const dir_out = join(dir_root, 'dist')
+const dir_root = join(__dirname,'..','demo')
+const dir_out = join(dir_root)
 
 console.log(`
---- config: webpack`)
+webpack --config: dev.pk.js`)
 
 module.exports = {
   mode: 'development',
@@ -25,7 +24,6 @@ module.exports = {
     stats: 'minimal'
   },
   plugins: [
-    // new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({title:'Demo'}),
     new HotModuleReplacementPlugin()
   ],
@@ -38,9 +36,6 @@ module.exports = {
       {
        test: /\.less$/,
        use: ['style-loader','css-loader','less-loader']
-      },{
-       test: /\.css$/,
-       use: ['style-loader','css-loader']
       }
     ]
   }

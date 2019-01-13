@@ -1,5 +1,5 @@
 #!/bin/sh
-CMD="\033[0;36m/LINT:\033[0m ";
+CMD="\033[0;36m/LINT:\033[0m "
 SRC=$1
 
 chsum1=""

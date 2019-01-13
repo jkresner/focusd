@@ -1,10 +1,10 @@
-@import '../focusd';
+@import 'types';
 
 body#demo {
   margin:0;padding:0;
   background:#eee;
-  font-size:15px;
-  > * { display:block;padding:0px 2px;list-style:none; }
+  // font-size:15px;
+  > * > li { display:block;padding:0px 2px;list-style:none; }
   > h1 {
     display:none;
     margin:0;
@@ -112,6 +112,7 @@ body#demo {
           opacity:1; 
           position:absolute;
           max-height:none;
+          min-height:500px; 
           top:1.5em;
           width:70%;
           right:15%;
@@ -126,7 +127,7 @@ body#demo {
 
   #prv { 
     padding:0px 5px;
-    max-height:1200px; 
+    max-height:1000px; 
     overflow:scroll;
   }
 
@@ -144,9 +145,9 @@ body#demo {
     margin-left:6px;
     &:hover {
       width:96%;
-    //   height:inherit;
+      height:inherit;
     //   overflow-x:scroll;
-    //   overflow-y:none;
+      overflow-y:scroll;
     //   min-width:95%;
     //   margin-left:1.5%;
     //   opacity:0.9;

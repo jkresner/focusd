@@ -1,48 +1,70 @@
 .focusd .mail {
   padding:1px 2px 1px 1px;
   width:480px;
-  border-top:dashed 1px hsla(30,50%,90%);
-  border-bottom:solid 1px hsla(30,50%,85%,100%);
-  background:hsla(30,50%,90%,.3);
+  border-top:solid 1px hsla(30,20%,90%);
+  border-bottom:solid 1px hsla(30,20%,90%,.5);
+  background:hsla(30,50%,90%,.2);
   color:hsla(30,50%,10%,95%);
   font:normal 12px courier;
 
-  tt { font-weight:bold }
-  time {  float:right;
-    padding:0;
-    margin-right:0.1em;
-    letter-spacing:-0.16em }
-
-  header:before { 
-    display:block;
-    position:absolute;
-    z-index:3;
-    left:2px;
-    top:2px;
-    width:12px;
-    height:12px;
-    background:url(profile_mask.png) center contain no-repeat;
-    // padding:3px;
-    border:dotted 1px #bbb;
-    content:' ';
-    // border-radius:50%;
+  > header {
+    color:#888;
+    tt, i, time { 
+      font-size:0.85em;
+      line-height:1.0em; 
+    }
+    i, time { margin:0 0.35em 0 -2px }
+    > time { float:right;padding:0;letter-spacing:-0.16em }
+    svg+tt { font-weight:bold;display:block; }
+    > svg { 
+        display:block;
+        position:absolute;
+        z-index:3;
+        left:0px;
+        top:0px;
+        width:12px;
+        height:12px;
+        padding:1px;
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADESURBVEhL7dK7DcIwFIXhSDRQUdFBzwyINWALdoBxeIgW5kCUNAwA4tHRwH8ku7HsKI5N5yN9jeN7E+XeqiRXRtjhZewxRpao+Q1fxx1DJEdf7ja3tkjOG77m8kRy/v4CDdTXXNZIjrZFA3Wba/BZhqxokzRQ/ZIHNsjWvCSYDqZYYqADJzpbYQLdbZweFrjCbswFM/SNuTmzz3VXNV3URptxhi2MdULtdh3hK4xxQDAf+IpiqEcwvoI2gvFdbqOkaarqB+bGkzy4fpegAAAAAElFTkSuQmCC') no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        // background-origin: padding-box;
+        // background-clip: border-box;
+        background-color: #eee;
+        border:solid 1px #ddd;
+        border-top:none;
+        // border-radius:50%;
+      }
   }
+  
 
-  header { padding:4px 4px 4px 20px;position:relative }
+  header { padding:4px 4px 4px 20px; }
   header cite {               
     display:none;
-    padding:2px 0 0 0;
+    margin-left:-3px;
+    padding:2px 0 0 0px;
     line-height:1.1em;
-    font:bold normal 1.1em arial;
-    color:black 
+    font:bold normal 0.9em arial;
+    color:black;
   }
-  section { 
-    padding:0 2px 0 18px;
-    white-space:pre-wrap;
+  header:first-child cite { 
+    display:block;
   }
 
-  .swap header cite {  display:block }
- 
+  section { 
+    // white-space:pre-wrap;
+    padding:5px 2px 0 15px;
+    // border-top:solid 1px #d3d3d3;
+    font:normal 1em sans-serif;
+    line-height:1.5em;    
+    p { margin:8px 0 }
+  }
+
+  &.swap header cite { display:block }
+
+  nav { display:none }
+  &:hover nav { display:block; }
+
   // section {  padding:0px 0px 3px 0px;
   //   line-height:18px;
   //   font-family:sans-serif;

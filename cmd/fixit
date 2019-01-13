@@ -1,15 +1,16 @@
 #!/bin/sh
+# Usage
+#
+# cmd/fixt -w-up -s ptt
 
-CMD="\033[0;36mfix/FIXT\033[0m";
-FS_ROOT=$(pwd)
-FS_FIXT=${FS_ROOT}/test/fixt
-FS_UP=;
-FS_SRC=''
-SET=''
-LN=$(cat $FS_ROOT/bin/fix.tpl)
+CMD="\033[0;36mcmd/fixit\033[0m";
+FS_ROOT="$(pwd)"
+FS_FXT=${FS_ROOT}/fxt
+FS_W=;
+LN=$(cat $FS_ROOT/cmd/fix.tpl)
 
 cat_in() {
-  FS_IN=${FS_FIXT}/in
+  FS_IN=${FS_FXT}/in
   cd $FS_IN;  
   echo "${CMD}.IN ${FS_IN}"
   IN="module.exports = { noop: \`"
@@ -18,11 +19,11 @@ cat_in() {
     IN+="$f': \`$(cat $f)"
   done
   IN+=$(printf "\` };")
-  printf "%s" "$IN" > $FS_FIXT/in.md.js  
+  printf "%s" "$IN" > $FS_FXT/in.md.js  
 }
 
 cat_up() {
-  FS_UP=${FS_FIXT}/up  
+  FS_UP=${FS_FXT}/up  
   cd $FS_UP;
   echo "${CMD}.UP ${FS_UP}"
   UP="module.exports = { noop: \`"
@@ -31,30 +32,32 @@ cat_up() {
     UP+="$f': \`$(cat $f)"
   done
   UP+=$(printf "\` };")
-  printf "%s" "$UP" > $FS_FIXT/up.md.js
+  printf "%s" "$UP" > $FS_FXT/up.md.js
 }
 
-if [[ $3 = '-set' ]] ; then
-  FS_FIXT=${FS_FIXT}/set/$4
+if [[ $2 = '-set' ]] ; then
+  FS_FXT=${FS_FXT}/set/$3
 fi 
 
 if [[ $1 = '-w-in' ]] ; then
   CAT_W=cat_in
-  FS_SRC=${FS_FIXT}/in/$2.md
+  FS_W=${FS_FXT}/in
+  cat_up  
 elif [[ $1 = '-w-up' ]] ; then
   CAT_W=cat_up
-  FS_SRC=${FS_FIXT}/up/$2
+  FS_W=${FS_FXT}/up
+  cat_in  
 else
   cat_up
   cat_in  
 fi
 
 if [[ $2 != '' ]] ; then
-  echo "${CMD}.WATCH ${FS_SRC}"
+  echo "${CMD}.WATCH ${FS_W}"
   chsum1=""
   while [[ true ]] ; do
-    chsum2=`find ${FS_SRC} -type f -exec md5 {} \;`
-    if [[ $chsum1 != $chsum2 ]] ; then           
+    chsum2=`find ${FS_W} -type f -exec md5 {} \;`
+    if [[ $chsum1 != $chsum2 ]] ; then
       $CAT_W
       chsum1=$chsum2
     fi
