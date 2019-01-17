@@ -9,7 +9,7 @@
     t~ doc  
 
 +  
-    1. /\`\n[a-b]: *\n\`/  
+    1. /\`\\n[a-b]: *\\n\`/  
     1. /\`text select\`/g  
     > ## header  
     > and p body  

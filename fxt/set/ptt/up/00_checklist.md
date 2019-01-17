@@ -1,59 +1,20 @@
 # PTT Defence
 
+- [  ] you have a complaint;
+
 Charges
 - [ ] 474.15 Using a carriage service to make a threat
 - [ ] 13(1) Stalking or intimidation with intent to cause fear of physical or mental harm
 
-Evidence
-- [ ] records (gdrive) + ideas
-- [ ] emails time-line 
-
-Articles
-- [ ] guiltynotguilty.com.au/apprehended-violence-orders-nsw-criteria-that-must-be-met
-- [ ] gizmodo.com/why-your-brain-cant-let-go-of-a-grudge-1828421174
-- [ ] hcf.com.au/health-agenda/health-care/common-conditions/mould-in-the-home
-- [ ] hcf.com.au/health-agenda/work-life/work/workplace-bullying
-
-CA04
-- [ ] Failure of persons to provide necessities of life
-- [ ] Obtaining financial advantage or causing financial disadvantage
-- [ ] False document—meaning
-- [ ] Forgery—making false document
-- [ ] Using false document
-- [ ] False accusations etc
-- [ ] Tampering etc with evidence
-- [ ] General offence of perverting the course of justice
-- [ ] Offence of perjury
-- [ ] False statements in evidence on commission
-- [ ] Self-defence—when available
-- [ ] Self-defence—response to lawful conduct
-- [ ] Criminal defamation
-- [ ] Intimidation or annoyance by violence or otherwise
-- [ ] Knowingly joining or continuing in etc an unlawful assembly
-- [ ] Meaning of “intimidation”
-- [ ] Meaning of “stalking”
-- [ ] Stalking or intimidation with intent to cause fear of physical or mental harm
-
-CDV07
-- [ ] Meaning of “intimidation”
-- [ ] Meaning of “stalking”
-- [ ] Meaning of “domestic violence offence”
-- [ ] Recording of domestic violence offences
-- [ ] Application for making of apprehended personal violence order by court
-- [ ] Court may make apprehended personal violence order
-- [ ] Matters to be considered by court
-
+Literary interpretation
+- [ ] 
 
 EV95::legislation.nsw.gov.au/~/view/act/1995/25/whole#/chap2/part2.3/sec54
-- [ ] 84 (Exclusion of admissions influenced by violence and certain other conduct)
 - [ ] 85 (Criminal proceedings: reliability of admissions by defendants)
 - [ ] 90 (Discretion to exclude admissions)
 - [ ] 138 (Exclusion of improperly or illegally obtained evidence)
 - [ ] 139 (Cautioning of persons), or
 
-
-https://legalanswers.sl.nsw.gov.au
-- [ ] /neighbours-and-law/entry-access-and-privacy
 
 <!------------------------------------------------------------------------------->
 
@@ -78,7 +39,6 @@ https://legalanswers.sl.nsw.gov.au
 3. Conduct of complainant
 
   ?. Reasonable grounds to fear
-
   a. Ignoring health and safety
   b. Complainant did not in fact fear violent
   c. FT Complaint, breaking civil law
@@ -686,10 +646,6 @@ by learning Strata legislation and researching recent NSW Strata case law. It ma
 no sense, that I would compromise this path with violent acts that could harm my
 chances of recovering financial losses.
 
-This isn't the first time John O'Neill has defamed me publicly as demonstrated
-in his labeled me "unfinacial" to all my neighbors when I'd paid my levies. He is not
-a truthful man and I am able to demonstrate other instances of him providing
-misinformation.
 
 <!-- 5
 biased conduct and skewed standard of

@@ -30,9 +30,16 @@
 
 +  
     1. /\`Elizabeth Bateman\`/
-    > Not straight forward who the message was for
-
-
+    > No message was not sent between 6:30pm - 10am
+    > Not straight forward who the message was for the message was not intended solely for John
+    > Contradict myself in the interview "Talk about suing them"
+    > This admission process was deceptive and I did not have a proper chance to answer thoroughly
+    
++   
+    1. /\`You may choose to ignore me\`/ /\`This isn't a game\`/
+    > Service of notices + Stop gap + Garage
+    
+    
 +  
     1. /\`pull the trigger\`/i
     2.

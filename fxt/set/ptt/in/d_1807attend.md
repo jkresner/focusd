@@ -4,8 +4,11 @@
 
 # COURT ATTENDANCE  \\nNOTICE  _(DEFENDANT COPY)_
 
+\\n
 
 You are required to attend the WAVERLEY LOCAL Court on Tue 9th Oct 2018 at 9:30am
+
+\\n
 
 ## DEFENDANT DETAILS
 >>> __CNI Number__ : 741557981
@@ -34,7 +37,7 @@ You are required to attend the WAVERLEY LOCAL Court on Tue 9th Oct 2018 at 9:30a
     __Criminal Code Act 1995, Section 474.15(2)__  
     > Use carriage service to threaten serious harm 
       between 6:29 pm on 15/03/2018 and 10:00 am on 16/03/2018 at Bondi Junction. 
-      did use his email to threaten serious harm. where victim feared for their safety
+      did use his email to threaten serious harm where victim feared for their safety
 
 2. >>> Law Part Code 70755 T2
 
@@ -106,7 +109,7 @@ The accused in the matter is Jonathon KRESNER.
 
 > The accused is charged with ‘use carriage service to threaten serious harm', Section 474.15 (2) of the Criminal Code Act 1995 and issued with a court attendance notice.  
 
-> If the offence is proven, police request that the court make an order pursuant to section 134 (1) & (2) of the Law Enforcement (Powers and Responsibilities) Act 2002, to present to nearest police station to enable the accused' photograph, ﬁngaprints and palm prints to be taken.  
+> If the offence is proven, police request that the court make an order pursuant to section 134 (1) & (2) of the Law Enforcement (Powers and Responsibilities) Act 2002, to present to nearest police station to enable the accused' photograph, fingerprints and palm prints to be taken.  
 
 > All legislative requirements under Law Enforcement (Powers and Responsibilities) Act 2002 were adhered to at all times during this investigation.
 

@@ -6,7 +6,9 @@
     t~ doc
     n~ SCL - BOE advice
 
-3.  
-    t~ doc
-    n~ Cash statement
-    Ð~ decimal,zeros
+    
++ 
+  1.
+  2.
+  3.
+  > 
