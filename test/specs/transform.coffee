@@ -2,6 +2,7 @@ global.tsf = require('../../lib/transform')
 module.exports = -> 
 
    DESCRIBE "ellipt_ln", () => require('./transform/ellipt_ln')
+   DESCRIBE "fm_date", () => require('./transform/fm_date')
    DESCRIBE "mp_ellipt", () => #require('./transform/mp_ellipt')
    DESCRIBE "mp_crypt", () => #require('./transform/mp_crypt')
    DESCRIBE "mp_abbr", () => #require('./transform/mp_abbr')
