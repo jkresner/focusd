@@ -1,0 +1,94 @@
+.web {
+  .boxShadow;
+  padding:30px 1px 5px 1px;
+  width:480px;
+  border:solid 2px hsla(215,100%,85%,.15);
+  border-radius:10px;
+  border-bottom-left-radius:3px;
+  border-bottom-right-radius:3px;  
+  border-bottom-width:10px;
+  border-top-width:3px;
+  background:hsla(215,100%,90%,.1);
+  color:hsla(215,100%,15%,.96);
+  font:12px Times New Roman;
+  // letter-spacing:-0.25px;
+
+  table { font-size:11.5px;vertical-align:top;
+    border-collapse:separate;
+    border-spacing:2px;
+   }
+  td { padding:4px;vertical-align:top }
+  th { font-family:arial;font-size:9.5px;letter-spacing:-.5px }
+  td, th { 
+    &:first-child { padding-left:0 }
+    &:last-child { padding-right:0 }
+    > strong { font-size:13px }
+  }
+
+  ul:first-child {
+    list-style:none;
+    list-style-type:none;
+    background-color:hsla(215,100%,25%,.16); 
+    position:absolute;
+    padding:8px;
+    height:26px;
+    top:0;
+    left:-1px;
+    right:-1px;
+    margin:0 2px;padding:1px 2px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    font-weight:bold;
+    font-family:courier;
+    color:black;
+    font-size:22px;
+    line-height:14px;
+    text-decoration:none;
+      li { 
+        display:inline-block;
+        vertical-align:top;
+        list-style:none;
+        float:left;
+        clear:none;
+        width:16px;
+        height:16px;
+        padding:1px;
+        color:gray;
+        margin:2px;
+        text-align:center;
+        border:solid 1px white;
+        border-radius:50%;
+       } 
+      li:last-child {
+        font-size:13px;
+      }
+    
+    // float:left;
+  }
+
+  em strong { background:yellow }
+
+  h2 { font-family:arial;padding:2px;margin:10px 0 }
+
+  h1 { margin:40px 0 10px 0;padding:0;
+    font-family:arial; }
+  h1 > a { 
+    position:absolute;
+    top:4px;
+    left:76px;
+    right:5px;
+    z-index:4; 
+    display:block;
+    margin-bottom:15px;
+    padding:4px 10px;
+    border-radius:10px;
+    text-decoration:none;
+    text-align: left;
+    background-color:white;
+    color:blue;
+    font-size:11px;
+    font-weight:normal;
+    line-height:1.15em;
+  }
+  
+}

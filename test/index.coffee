@@ -1,11 +1,9 @@
-# path    = require('path')
-# fs      = require('fs')
-
 SCREAM  = require('screamjs')
-OPS     = { app: 'empty' }
-# ONREADY = (test) ->
-#   console.log('TESTS ready')
-#   test()
+OPS     = {}
+
+ONREADY = (test) ->
+  console.log('TEST suite ready...'.green)
+  test()
 
 
-SCREAM(OPS).run()
+SCREAM(OPS).run(ONREADY)
