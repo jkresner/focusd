@@ -98,12 +98,16 @@ mark {
   padding:10px;
   background:rgba(223, 226, 231, .35);
   margin-right:5px;
+  ol { 
+    padding-left:16px; }
   > ol {
     font-size:1em;
     margin-top:-2px;
     padding-left:1.2em;
     counter-reset:a_oli; 
-     > li {
+    p { margin-top:0; 
+    } 
+    > li {
       padding:4px 6px;
       margin:4px 2px 15px 2px;
       width:320px;
@@ -136,6 +140,7 @@ mark {
     > li.hi6:before { .hi6 }
     > li.hi7:before { .hi7 }
     // > li.hi8:before { }        
+
 } }
 
 

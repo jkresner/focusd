@@ -8,13 +8,13 @@
     t~ law
     #~ l_cv07p01-3
     n~ 13(1) Stalking or intimidation with intent to cause fear
-    …~ 5-126
+    …~ 5-127
 
 3.  
     t~ law
     #~ l_cc95p10.6
     n~ Criminal Code - Telecommunications Services 
-    …~ 4-18,29-34
+    …~ 4-17,28-33
 
 4.  
     t~ doc
@@ -30,16 +30,20 @@
 
 +  
     1. /\`Elizabeth Bateman\`/
-    > No message was not sent between 6:30pm - 10am
+    > No email sent between 6:30pm - 10am
+    >
+    >
     > Not straight forward who the message was for the message was not intended solely for John
+    >
     > Contradict myself in the interview "Talk about suing them"
-    > This admission process was deceptive and I did not have a proper chance to answer thoroughly
-    
+    > This admission process was deceptive and I did not have a proper chance to answer thoroughly,
+
+
 +   
     1. /\`You may choose to ignore me\`/ /\`This isn't a game\`/
     > Service of notices + Stop gap + Garage
-    
-    
+
+
 +  
     1. /\`pull the trigger\`/i
     2.

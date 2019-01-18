@@ -41,17 +41,20 @@
   a { text-decoration:none;
       color:#3170ab;
       font-style:italic }
+  strong a { font-style:normal;}
 
   blockquote { 
     margin:0;
     padding:0;
     border:none;
     >& { margin:.5em 0 0 0;
-      > p { margin:0 0 0 .5em }
-    }
-    > p {
-      font:0.75em arial;
-      > em { font-weight:bold;font-style:normal;opacity:0.7 } } }
+      > p { margin:0 0 0 .5em } }
+    > p, 
+    > table {
+      margin-top:.25em;
+      font:0.7em arial;
+      // > strong { display:block; }
+      em { display:block;font-style:normal;opacity:0.75 } } }
 
   li { position:relative; 
     margin:3px 0 4px 0px;
@@ -91,6 +94,7 @@
   p { line-height:1em;margin:.25em 0 0px 0;padding:1px 0 1px 0 }
   > p { line-height:1.15em;margin:.5em 0 0 .5em }
 
+  table, td { vertical-align:top }
 }
 
 /*

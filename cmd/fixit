@@ -35,32 +35,38 @@ cat_up() {
   printf "%s" "$UP" > $FS_FXT/up.md.js
 }
 
-if [[ $2 = '-set' ]] ; then
-  FS_FXT=${FS_FXT}/set/$3
+if [[ $1 != '' ]] ; then
+  FS_FXT=${FS_FXT}/set/$1
 fi 
 
-if [[ $1 = '-w-in' ]] ; then
-  CAT_W=cat_in
-  FS_W=${FS_FXT}/in
-  cat_up  
-elif [[ $1 = '-w-up' ]] ; then
-  CAT_W=cat_up
-  FS_W=${FS_FXT}/up
-  cat_in  
-else
-  cat_up
-  cat_in  
-fi
+# if [[ $1 = '-w-in' ]] ; then
+#   CAT_W=cat_in
+#   FS_W=${FS_FXT}/in
+#   cat_up  
+# elif [[ $1 = '-w-up' ]] ; then
+#   CAT_W=cat_up
+#   FS_W=${FS_FXT}/up
+#   cat_in  
+# else
+#   cat_up
+#   cat_in  
+# fi
 
-if [[ $2 != '' ]] ; then
-  echo "${CMD}.WATCH ${FS_W}"
+# if [[ $2 != '' ]] ; then
+  echo "${CMD}.WATCH ${FS_FXT}"
   chsum1=""
+  chsum3=""  
   while [[ true ]] ; do
-    chsum2=`find ${FS_W} -type f -exec md5 {} \;`
+    chsum2=`find ${FS_FXT}/in -type f -exec md5 {} \;`
+    chsum4=`find ${FS_FXT}/up -type f -exec md5 {} \;`    
     if [[ $chsum1 != $chsum2 ]] ; then
-      $CAT_W
+      cat_in  
       chsum1=$chsum2
+    fi
+    if [[ $chsum3 != $chsum4 ]] ; then
+      cat_up
+      chsum3=$chsum4
     fi
     sleep 2
   done
-fi
+# fi

@@ -27,7 +27,7 @@ module.exports = {
   },
 
   lref(r, param, ops) {
-    var matchList = '\n'
+    var matchList = '\n\n'
     for (var auth in authority_lookup) {
       if (r.indexOf(auth) > -1) matchList += (authority_lookup[auth]+'\n')
       // r = r.replace(rx, function(m) { 
