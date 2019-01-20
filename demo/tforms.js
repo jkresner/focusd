@@ -1,7 +1,8 @@
-var authority_lookup = require('./authority')
-
+var authority = require('./authority')
 module.exports = {
 
+  /*
+  */
   mail_header(md, param, ops) {
     function encodeLgGg(str) { return str.replace(/[\u00A0-\u9999<>\&]/gim, 
       function(i) { return `&#${i.charCodeAt(0)};` }) }
@@ -26,30 +27,25 @@ module.exports = {
           +'<section>\n'+parts[1]+'\n</section>'
   },
 
+  /*
+  */
   lref(r, param, ops) {
     var matchList = '\n\n'
-    for (var auth in authority_lookup) {
-      if (r.indexOf(auth) > -1) matchList += (authority_lookup[auth]+'\n')
-      // r = r.replace(rx, function(m) { 
-        // if (!matchList[m]) 
-        // LOG('m', m)
-        // return m.match
-      // })
-    }    
-    LOG('lref', matchList)
+    for (var auth in authority) 
+      if (r.indexOf(auth) > -1) matchList += (authority[auth]+'\n')
+    
     return r + matchList
-// [Agricultural Tenancies Act 1990]: //? "AT90"
 // [Civil Procedure Act 2005]: //act/2005/28 "CP98"
 // [Commercial Arbitration Act 2010]: /? "CA10"
 // [Disability Discrimination Act 1992]: https://www.legislation.gov.au/ "DD92"
-// [Fines Act 1996]: //act/1996/? "FN96"
 // [Imperial Acts Application Act 1969]: //act/1969/30 "IM69"
 // [Legal Profession Act 2004]: //act/2004/112 "LP04"
 // [Strata Schemes (Leasehold Development) Act 1986]: //act/1986/219 "SL86"
 // [Strata Schemes Management Regulation 2010]: //regulation/2010/492 "SM10"
   },
 
-
+  /*
+  */
   cref(md, param, ops) {
     return md /*+ `
 [Rosenthal v The Owners SP 20211 (2017) NSWCATCD 80]: / "Rosenthal 2017"
@@ -78,7 +74,8 @@ module.exports = {
 [Potter v Minahan (1908) 7 CLR 277; 1908 HCA 63]: # ""`*/
   },
 
-
+  /*
+  */
   law_li(md, param, ops) {
     return md
       // .replace(/\n\n\n\n/g,'\n\n\n')
@@ -91,7 +88,8 @@ module.exports = {
       .replace(/\n\s*\([a-z]\)\s+/g, '\n - ')
   },
   
-
+  /*
+  */
   law_stripHtml(text, param, ops) {
     var r = text.toString()
     var rx = {

@@ -45,4 +45,24 @@
     
     
     
+//43  Prior inconsistent statements of witnesses///
+(1)  ...witness may be cross-examined about a prior inconsistent statement alleged to have been made by the witness whether or not:
+   (a)  complete particulars of the statement have been given to the witness, or
+   (b)  a document containing a record of the statement has been shown to the witness.
+(2)  If, in cross-examination, a witness does not admit that he or she has made a prior inconsistent statement, the cross-examiner is not to adduce evidence of the statement otherwise than from the witness unless, in the cross-examination, the cross-examiner:
+   (a)  informed the witness of enough of the circumstances of the making of the statement to enable the witness to identify the statement, and
+   (b)  drew the witness’s attention to so much of the statement as is inconsistent with the witness’s evidence.
+(3)  For the purpose of adducing evidence of the statement, a party may re-open the party’s case.
+
+
+(9)  If evidence of a previous representation about a matter has been adduced by a defendant and has been admitted, the hearsay rule does not apply to evidence of another representation about the matter that:
+    (a)  is adduced by another party, and
+    (b)  is given by a person who saw, heard or otherwise perceived the other representation being made.
     
+    
+
+103   Exception: cross-examination as to credibility
+(1)  The credibility rule does not apply to evidence adduced in cross-examination of a witness if the evidence could substantially affect the assessment of the credibility of the witness.
+(2)  Without limiting the matters to which the court may have regard for the purposes of subsection (1), it is to have regard to:
+   (a)  whether the evidence tends to prove that the witness knowingly or recklessly made a false representation when the witness was under an obligation to tell the truth, and
+   (b)  the period that has elapsed since the acts or events to which the evidence relates were done or occurred.

@@ -19,6 +19,7 @@ module.exports = {
     clientLogLevel: 'none',
     contentBase: './demo',
     noInfo: true,
+    historyApiFallback: true,
     hot: true,
     port: 8060,
     stats: 'minimal'
@@ -29,7 +30,8 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: dir_out
+    path: dir_out,
+    publicPath: '/'    
   },
   module: {
     rules: [
