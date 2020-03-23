@@ -1,13 +1,52 @@
-.set li.img {                    display:inline-block;width:47%;margin:1%;vertical-align:top;position:relative; }
-.dev.set li.img { border:solid 1px red; }
-.set li.img>header:before {      background:#e3e3e3;width:100%;height:20px;content:' [ ] ';padding-left:3px  }
-.set li.img.swap>header:before { background:#c3c3c3;color:navy;content:' [ ] ' }
-.set li.img>header {             position:absolute; }
-.set li.img>header cite {        position:absolute;line-height:19px;top:0;left:26px;color:black;z-index:2  }
-.set li.img>header time {        display:inline-block;padding:4px }
-.set li.img tt {                 margin:20px 80px;display:inline-block;padding:3px;font-size:11px }
-.set li.img figure {             width:100%; }
-.set li.img figure > img {       width:100%!important }
-.set li.img figcaption {         width:100%;height:28px;color:black;font-weight:bold;
-    margin:-40px 0 0 6px;padding:4px;background:white;display:block;opacity:0.75; }
+.set li.img { 
+  display:inline-block;
+  width:47%;margin:1%;
+  vertical-align:top;
+  position:relative; 
+  font-size:0.7em;
+
+/*  >header:before {      
+    background:#e3e3e3;
+    width:100%;
+    height:20px;
+    padding-left:3px  }
+  // >header:before { 
+  //   background:#c3c3c3; }*/
+  >header { position:absolute;
+    cite { position:absolute;
+      line-height:19px;
+      top:0;left:26px;
+      color:black;
+      z-index:2  }
+    tt { display:inline-block;
+      margin:20px 80px;
+      padding:3px;
+      font-size:11px }
+    time { display:inline-block;
+      padding:4px }}
+
+  figure { width:100%; }
+  figure > img {
+    background-color:white; 
+    padding:2px;
+    border:solid 2px hsla(215,100%,85%);
+    width:100%;
+    overflow:crop;
+  }
+  figcaption { 
+    position:absolute;
+    z-index:3;
+    display:block;
+    margin:-40px 0 0 6px;
+    padding:4px;
+    width:100%;
+    height:28px;
+    color:black;
+    font-weight:bold;
+    background-color:hsla(0,0%,100%,.5) }}
+
+// .dev.set li.img { border:solid 1px red; }
+
+
+
 

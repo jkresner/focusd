@@ -67,7 +67,7 @@ var cd = doc.child('code', '\nr\ne\nn\nd\ne\nr\ni\nn\ng', 'html language-html', 
 var t = doc.ta
 var ups = [
   t('upi', ''),
-  t('up', d.up, 'json', fmt),
+  t('up', d.up, 'short', fmt),
   t('upf', '')
 ]
 var ins = d.in.map(function (src, i) {

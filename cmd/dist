@@ -1,0 +1,3 @@
+#!/bin/sh
+node_modules/.bin/lessc demo/styles/types.less focusd.css
+node_modules/.bin/webpack --config cmd/dist.pk.js

@@ -4,8 +4,11 @@ module.exports = {
   /*
   */
   mail_header(md, param, ops) {
-    function encodeLgGg(str) { return str.replace(/[\u00A0-\u9999<>\&]/gim, 
-      function(i) { return `&#${i.charCodeAt(0)};` }) }
+    function encodeLgGg(str) { return str }
+// -- Encoding screws up psuedofix ... but can't remember the reason for encoding...
+//      return str.replace(/[\u00A0-\u9999<>\&]/gim, function(i) { 
+//      return `&#${i.charCodeAt(0)};` 
+//      })}
 
     var parts = md.split(/\n\-\-Content\n/ig)
     if (parts.length != 2) return md
@@ -18,16 +21,26 @@ module.exports = {
       if (/^from: /i.test(ln)) h.f = 
         '<svg></svg><tt>'+encodeLgGg(ln.replace(/^from: /i,''))+'</tt>'
       if (/^to: /i.test(ln)) h.t = 
-        '<i>to</i><tt>'+encodeLgGg(ln.replace(/^to: /i,''))+'</tt>'
+        '<b>TO</b><tt>'+encodeLgGg(ln.replace(/^to: /i,''))+'</tt>'
+      if (/^cc: /i.test(ln)) h.t += 
+        '<b>CC</b><tt>'+encodeLgGg(ln.replace(/^cc: /i,''))+'</tt>'      
       if (/^subject: /i.test(ln)) h.s = 
-        '<cite>Subject: '+ln.replace(/^subject: /i,'')+'</cite>'
+        //<b>Subject</b>
+        '<cite>'+ln.replace(/^subject: /i,'')+'</cite>'
     }
 
+    body = parts[1].trim()
     return '<header>'+h.d+h.f+h.t+h.s+'</header>'
-          +'<section>\n'+parts[1]+'\n</section>'
+      + (body == '' ? '' : '<section>\n'+body+'\n</section>')
   },
 
-  /*
+  /* 
+    ## Law (authority) reference
+    `[${title}]: ${url} "${key}"`
+    > [Strata Schemes Management Regulation 2010]: //regulation/2010/492 "SM10"      
+// [Imperial Acts Application Act 1969]: //act/1969/30 "IM69"
+// [Strata Schemes (Leasehold Development) Act 1986]: //act/1986/219 "SL86"
+// [Strata Schemes Management Regulation 2010]: //regulation/2010/492 "SM10"
   */
   lref(r, param, ops) {
     var matchList = '\n\n'
@@ -35,16 +48,11 @@ module.exports = {
       if (r.indexOf(auth) > -1) matchList += (authority[auth]+'\n')
     
     return r + matchList
-// [Civil Procedure Act 2005]: //act/2005/28 "CP98"
-// [Commercial Arbitration Act 2010]: /? "CA10"
-// [Disability Discrimination Act 1992]: https://www.legislation.gov.au/ "DD92"
-// [Imperial Acts Application Act 1969]: //act/1969/30 "IM69"
-// [Legal Profession Act 2004]: //act/2004/112 "LP04"
-// [Strata Schemes (Leasehold Development) Act 1986]: //act/1986/219 "SL86"
-// [Strata Schemes Management Regulation 2010]: //regulation/2010/492 "SM10"
   },
 
   /*
+    Caselaw (authority) reference
+    [${title}]: ${url} "${key}"
   */
   cref(md, param, ops) {
     return md /*+ `
