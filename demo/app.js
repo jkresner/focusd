@@ -1,12 +1,12 @@
-window.LOG = function () { if (true)
-  console.log.apply(this, arguments) }
-
 import '../styles/demo/layout.less'
 import html from './html'
 import focusd from '../lib/focusd'
 import transforms from './tforms'
 import d from './data'
 import moment from 'moment-timezone'
+
+window.LOG = function () { if (true)
+  console.log.apply(this, arguments) }
 
 window.moment = moment
 var fmt = ['json','short','compact']

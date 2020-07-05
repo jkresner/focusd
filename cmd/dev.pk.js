@@ -14,18 +14,18 @@ module.exports = {
   entry: {
       index: join(dir_root,'app.js')
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
-    clientLogLevel: 'none',
+    // clientLogLevel: 'none',
     contentBase: './demo',
-    noInfo: true,
     historyApiFallback: true,
     hot: true,
+    noInfo: true,
     port: 8060,
     stats: 'minimal'
   },
   plugins: [
-    new HtmlWebpackPlugin({title:'Demo'}),
+    new HtmlWebpackPlugin(),
     new HotModuleReplacementPlugin()
   ],
   output: {
